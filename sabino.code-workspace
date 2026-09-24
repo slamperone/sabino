@@ -1,0 +1,22 @@
+{
+  "folders": [
+    {
+      "name": "🚀 Sabino SPA (Activo)",
+      "path": "."
+    },
+    {
+      "name": "📦 Webflow Original (Consulta)",
+      "path": "../sabino2/puenter-agency-wip.webflow.io"
+    }
+  ],
+  "settings": {
+    "files.exclude": {
+      "**/.git": false,
+      "**/.DS_Store": true,
+      "**/Thumbs.db": true
+    },
+    "search.exclude": {
+      "**/hts-cache": true
+    }
+  }
+}
