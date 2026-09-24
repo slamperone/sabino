@@ -40,40 +40,61 @@ Existen dos ubicaciones relevantes en la máquina:
 ---
 
 ## 4. Estado de Avance y Trabajo Realizado
-Se ha limpiado y optimizado la página principal (`index.html`):
-
 1. **Desacoplamiento de Webflow**:
-   - Eliminación de scripts, chunks y dependencias directas no utilizadas.
-   - Preservación y adaptación de scripts necesarios de animación (`js/app.chunk.1.js`, `js/app.chunk.2.js`, `js/app.main.js`).
-2. **Estructura y Assets**:
-   - Migración de la sección de tarjetas de proyectos (`works-cards`) integradas desde la variante `home-3`.
-   - Reemplazo y limpieza de iconos de servicios (*Branding*, *Digital*, *Motion*) a assets locales/inline.
-   - Adición y optimización de logotipos de clientes en formato SVG (`clients-bcdme.svg`, `clients-everpure.svg`, `clients-seicym.svg`, `clients-serex.svg`).
-   - Corrección del menú responsive móvil (botón hamburguesa y transiciones).
-3. **Efectos e Interactividad**:
-   - Corrección de comportamiento en el escalado hover (`image-background-hover`).
-   - Sincronización de animaciones en marquesinas (`marquee-works`).
+   - Eliminación de scripts remotos de Webflow y CDNs externos.
+   - Preservación y adaptación de scripts locales de animación (`js/app.chunk.1.js`, `js/app.chunk.2.js`, `js/app.main.js`).
+2. **Migración a Astro (^4.16.19)**:
+   - Configuración de Astro con servidor de desarrollo (`npm run dev`) y compilación estática (`npm run build`).
+   - Modularización de componentes reutilizables:
+     - `src/layouts/BaseLayout.astro`: Shell base con `<head>`, metatags, Typekit y estilos unificados.
+     - `src/components/Navbar.astro`: Header responsive con logo SVG vectorial y menú animado.
+     - `src/components/Footer.astro`: Footer unificado de Puenter Agency.
+     - `src/components/BottomNavbar.astro`: Dock flotante inferior de proyectos y navegación.
+     - `src/components/WorkCard.astro`: Tarjeta de proyecto con seguimiento hover y marquesina.
+     - `src/components/LastCta.astro`: Sección CTA final con imágenes flotantes.
+   - Páginas migradas en Astro:
+     - `src/pages/index.astro`: Home modularizado y dinámico.
+     - `src/pages/works/steeeezy.astro`: Primer caso de estudio migrado con assets locales.
 
 ---
 
 ## 5. Estructura de Archivos del Repositorio Actual
 ```text
 sabino-final-orasi/
-├── .gitignore               # Ignora .DS_Store, logs y configs de editores
-├── PROJECT_CONTEXT.md       # Este archivo de contexto
-├── index.html               # Home funcional desacoplado
-├── css/
-│   └── styles.css           # Estilos principales del proyecto
-├── js/
-│   ├── app.chunk.1.js
-│   ├── app.chunk.2.js
-│   └── app.main.js
-└── img/                     # Recursos visuales del Home (fondos, SVGs, tarjetas)
+├── astro.config.mjs         # Configuración del framework Astro
+├── package.json             # Dependencias y scripts (dev, build, preview)
+├── PROJECT_CONTEXT.md       # Contexto técnico del proyecto
+├── public/                  # Assets estáticos servidos directamente en la raíz
+│   ├── img/                 # Fondos, iconos SVGs, imágenes de proyectos y clientes
+│   └── js/                  # Scripts locales de interacción y animación
+└── src/
+    ├── components/          # Componentes modulares reutilizables
+    │   ├── BottomNavbar.astro
+    │   ├── Footer.astro
+    │   ├── LastCta.astro
+    │   ├── Navbar.astro
+    │   └── WorkCard.astro
+    ├── layouts/             # Plantilla y Head común
+    │   └── BaseLayout.astro
+    ├── pages/               # Enrutamiento basado en archivos
+    │   ├── index.astro      # Página principal (/)
+    │   └── works/
+    │       └── steeeezy.astro # Caso de estudio (/works/steeeezy)
+    └── styles/
+        └── styles.css       # Hoja de estilos global complementada
 ```
 
 ---
 
-## 6. Siguientes Pasos (Roadmap)
-1. **Definición de Framework**: Determinar si se continuará con Vanilla modular o se migrará a Vite / Astro / React / Vue.
-2. **Migración de Páginas Secundarias**: Extraer progresivamente desde `sabino2` las secciones requeridas (`about`, `contact`, `works`), adaptándolas a componentes reutilizables.
-3. **Atención a Feedback**: Revisar las observaciones registradas en `Feedback web puenter.pdf` según prioridades.
+## 6. Comandos de Trabajo
+- `npm run dev`: Inicia el servidor de desarrollo local en `http://localhost:3000`.
+- `npm run build`: Genera el build de producción estático en `dist/` (100% optimizado).
+- `npm run preview`: Previsualiza localmente el build de producción.
+
+---
+
+## 7. Siguientes Pasos (Roadmap)
+1. **Migración de Casos de Estudio Restantes**: Migrar los proyectos adicionales (`mercury`, `straps`, etc.) reutilizando `BaseLayout` y `WorkCard`.
+2. **Migración de Páginas Secundarias**: Extraer progresivamente desde `sabino2` las secciones requeridas (`about`, `contact`, `blog`), transformándolas a páginas `.astro`.
+3. **Optimización Adicional**: Posible transición de datos de proyectos a colecciones de contenido (`src/content/works/`).
+

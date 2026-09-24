@@ -1,0 +1,260 @@
+---
+// src/pages/index.astro
+import BaseLayout from '../layouts/BaseLayout.astro';
+import BottomNavbar from '../components/BottomNavbar.astro';
+import WorkCard from '../components/WorkCard.astro';
+import LastCta from '../components/LastCta.astro';
+
+const projects = [
+  {
+    title: "Mercury",
+    href: "/works/mercury",
+    imgSrc: "/img/home-work-1.jpg"
+  },
+  {
+    title: "Straps",
+    href: "/works/straps",
+    imgSrc: "/img/home-work-2.jpg"
+  },
+  {
+    title: "Steeeezy",
+    href: "/works/steeeezy",
+    imgSrc: "/img/home-work-3.jpg"
+  },
+  {
+    title: "MODEL 911",
+    href: "/works/model-911",
+    imgSrc: "/img/home-work-4.jpg"
+  }
+];
+---
+
+<BaseLayout title="Puenter Agency — Creative Studio" wfPage="69003b725c09305a7640a56a">
+  <BottomNavbar />
+
+  <!-- Hero Section -->
+  <section>
+    <div class="full-size-hero align-bottom">
+      <div class="padding-global">
+        <div class="w-layout-blockcontainer container w-container">
+          <div class="hero-content-wrapper margin-bottom">
+            <div data-w-id="23485b9d-4d5f-62f6-cb1d-722c75a680bc" style="opacity:0" class="marquee-tag-home">
+              <div class="marquee-tag-wrapper">
+                <div class="text-size-small caps">LET'S CREATE MAGIC</div>
+                <div class="elipse"></div>
+              </div>
+              <div class="marquee-tag-wrapper">
+                <div class="text-size-small caps">LET'S CREATE MAGIC</div>
+                <div class="elipse"></div>
+              </div>
+              <div class="marquee-tag-wrapper">
+                <div class="text-size-small caps">LET'S CREATE MAGIC</div>
+                <div class="elipse"></div>
+              </div>
+            </div>
+            <div data-w-id="0acce929-b136-6735-9c0b-c89f082fa299" style="opacity:0" class="hero-heading-content">
+              <div>
+                <img src="/img/wordmark-white.png" alt="Puenter Agency Wordmark" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-background-image">
+        <img class="image" src="/img/home-bg-2.png" alt="Hero Background"
+          style="transform:translate3d(0, 0, 0) scale3d(2, 2, 1);filter:blur(5px)"
+          sizes="100vw" />
+        <div class="opacity-60">
+          <div class="hero-overlay-gradient"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tagline CTA Section -->
+  <section>
+    <div class="padding-global">
+      <div class="w-layout-blockcontainer container medium w-container">
+        <div class="cta-component">
+          <div class="what-we-do-wrapper">
+            <div class="marquee-tag">
+              <div class="marquee-tag-wrapper">
+                <div class="text-size-small caps">LET'S CREATE MAGIC</div>
+                <div class="elipse"></div>
+              </div>
+              <div class="marquee-tag-wrapper">
+                <div class="text-size-small caps">LET'S CREATE MAGIC</div>
+                <div class="elipse"></div>
+              </div>
+              <div class="marquee-tag-wrapper">
+                <div class="text-size-small caps">LET'S CREATE MAGIC</div>
+                <div class="elipse"></div>
+              </div>
+            </div>
+            <div data-w-id="cc7ba748-cbc9-6ffc-2c6f-723c008754bd" class="what-we-do">
+              <div class="text-size-xdisplay line-height-122 vw-style">Thoughtful design goes </div>
+              <div class="text-size-xdisplay line-height-122 show-mobile">
+                <span class="span-style">beyond aesthetics. </span>
+              </div>
+              <div class="highlight-wrapper">
+                <div class="text-size-xdisplay line-height-122 vw-style">
+                  <span class="span-style">beyond aesthetics.</span>
+                </div>
+                <div class="highlight-text"></div>
+              </div>
+              <div class="text-size-xdisplay line-height-122 vw-style">It creates clarity, builds engagement, and generates momentum.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services">
+    <div class="padding-global">
+      <div class="w-layout-blockcontainer container medium w-container">
+        <div class="services-cards-wrapper">
+          <div class="services-component">
+            <!-- Branding -->
+            <div data-w-id="40608484-2bd8-cf0e-f12e-16650eab2666" class="services-card">
+              <div class="services-image-wrapper">
+                <div class="services-image">
+                  <img src="/img/serv-branding-icon.png" alt="Branding Icon" />
+                </div>
+              </div>
+              <div class="services-content">
+                <div class="text-size-xlarge text-weight-bold cards-title">Branding</div>
+                <div class="max-width-26ch">
+                  <div class="cards-description">Identity systems designed to create clarity and lasting recognition</div>
+                </div>
+              </div>
+              <div class="services-overlay"></div>
+              <div class="image-background-hover">
+                <div class="overlay-services"></div>
+                <img src="/img/serv-branding-icon.png" style="width: 80% !important; height: 50% !important; margin:auto;" alt="Branding Hover" />
+              </div>
+            </div>
+
+            <!-- Digital Experiences -->
+            <div data-w-id="40608484-2bd8-cf0e-f12e-16650eab2671" class="services-card">
+              <div class="services-image-wrapper">
+                <div class="services-image">
+                  <img src="/img/serv-digital-icon.png" alt="Digital Icon" />
+                </div>
+              </div>
+              <div class="services-content">
+                <div class="text-size-xlarge text-weight-bold cards-title">Digital Experiences</div>
+                <div class="max-width-26ch">
+                  <div class="cards-description">Designed for engagement across every digital touchpoint</div>
+                </div>
+              </div>
+              <div class="services-overlay"></div>
+              <div class="image-background-hover">
+                <div class="overlay-services"></div>
+                <img src="/img/serv-digital-icon.png" style="width: 80% !important; height: 50% !important; margin:auto;" alt="Digital Hover" />
+              </div>
+            </div>
+
+            <!-- Motion Graphics -->
+            <div id="w-node-_40608484-2bd8-cf0e-f12e-16650eab267c-0eab2661" data-w-id="40608484-2bd8-cf0e-f12e-16650eab267c" class="services-card">
+              <div class="services-image-wrapper">
+                <div class="services-image">
+                  <img src="/img/serv-motion-icon.png" alt="Motion Icon" />
+                </div>
+              </div>
+              <div class="services-content">
+                <div class="text-size-xlarge text-weight-bold cards-title">Motion Graphics</div>
+                <div class="max-width-26ch">
+                  <div class="cards-description">Intentional motion that adds energy, rhythm, and momentum.</div>
+                </div>
+              </div>
+              <div class="services-overlay"></div>
+              <div class="image-background-hover">
+                <div class="overlay-services"></div>
+                <img src="/img/serv-motion-icon.png" alt="Motion Hover" style="width: 80% !important; height: 50% !important; margin:auto;" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Clients Marquee Section -->
+  <section>
+    <div class="padding-global">
+      <div class="marquee-container">
+        <marquee>
+          <img src="/img/clients-everpure.svg" alt="Everpure" />
+          <img src="/img/clients-bcdme.svg" alt="BCDME" />
+          <img src="/img/clients-seicym.svg" alt="SEICYM" />
+          <img src="/img/clients-serex.svg" alt="SEREX" />
+        </marquee>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Intro CTA -->
+  <section id="works">
+    <div class="gray-wrapper">
+      <div class="padding-global">
+        <div class="w-layout-blockcontainer container medium w-container">
+          <div class="cta-component">
+            <div class="cta-wrapper">
+              <div class="marquee-tag">
+                <div class="marquee-tag-wrapper">
+                  <div class="text-size-small caps">selected projects</div>
+                  <div class="elipse"></div>
+                </div>
+                <div class="marquee-tag-wrapper">
+                  <div class="text-size-small caps">selected projects</div>
+                  <div class="elipse"></div>
+                </div>
+                <div class="marquee-tag-wrapper">
+                  <div class="text-size-small caps">selected projects</div>
+                  <div class="elipse"></div>
+                </div>
+              </div>
+              <div class="cta">
+                <div class="text-size-xdisplay line-height-122 about-style">
+                  Strategic thinking. Thoughtful execution. Designed to connect, engage, and move brands forward.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Selected Projects Grid -->
+  <div class="gray-wrapper">
+    <section>
+      <div class="padding-global">
+        <div class="works-cards-wrapper">
+          <div class="work-cards-content">
+            <div class="work-small-card-wrapper">
+              <div class="card-collection-list-wrapper w-dyn-list">
+                <div role="list" class="work-small-card-list w-dyn-items">
+                  {projects.map((project) => (
+                    <WorkCard
+                      title={project.title}
+                      href={project.href}
+                      imgSrc={project.imgSrc}
+                    />
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Last CTA -->
+  <div id="contact">
+    <LastCta />
+  </div>
+</BaseLayout>

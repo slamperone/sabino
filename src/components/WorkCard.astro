@@ -1,0 +1,62 @@
+---
+// src/components/WorkCard.astro
+interface Props {
+  title: string;
+  href: string;
+  imgSrc: string;
+  imgAlt?: string;
+  cardId?: string;
+  hoverId?: string;
+  marqueeId?: string;
+}
+
+const {
+  title,
+  href,
+  imgSrc,
+  imgAlt = title,
+  cardId = "16ff824f-ee6e-6b46-00bf-bda4ef99dd77",
+  hoverId = "16ff824f-ee6e-6b46-00bf-bda4ef99dd79",
+  marqueeId = "16ff824f-ee6e-6b46-00bf-bda4ef99dd7e"
+} = Astro.props;
+---
+
+<div role="listitem" class="work-small-card-item w-dyn-item">
+  <a data-w-id={cardId} style="opacity: 1;" href={href} class="work-small-card w-inline-block">
+    <div class="hover-follow-wrapper">
+      <div data-w-id={hoverId} class="hover-follow">
+        <div>View Project</div>
+      </div>
+    </div>
+    <div class="big-card-image">
+      <img alt={imgAlt} loading="lazy" src={imgSrc} class="image" />
+      <div class="mask-frame"></div>
+    </div>
+    <div data-w-id={marqueeId} class="works-marquee-wrapper">
+      <div class="marquee-works">
+        <h3 class="work-text-size">{title}</h3>
+        <div class="elipse-marquee"></div>
+        <h3 class="work-text-size">{title}</h3>
+        <div class="elipse-marquee"></div>
+      </div>
+      <div class="marquee-works">
+        <h3 class="work-text-size">{title}</h3>
+        <div class="elipse-marquee"></div>
+        <h3 class="work-text-size">{title}</h3>
+        <div class="elipse-marquee"></div>
+      </div>
+      <div class="marquee-works">
+        <h3 class="work-text-size">{title}</h3>
+        <div class="elipse-marquee"></div>
+        <h3 class="work-text-size">{title}</h3>
+        <div class="elipse-marquee"></div>
+      </div>
+      <div class="marquee-works">
+        <h3 class="work-text-size">{title}</h3>
+        <div class="elipse-marquee"></div>
+        <h3 class="work-text-size">{title}</h3>
+        <div class="elipse-marquee"></div>
+      </div>
+    </div>
+  </a>
+</div>
