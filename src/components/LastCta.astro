@@ -1,5 +1,7 @@
 ---
 // src/components/LastCta.astro
+import DisplayTitle from "./DisplayTitle.astro";
+
 interface Props {
   text?: string;
   buttonText?: string;
@@ -7,9 +9,9 @@ interface Props {
 }
 
 const {
-  text = "Ready to elevate your brand with Puenter?",
+  text = "Let's build something remarkable.",
   buttonText = "Get in touch",
-  buttonHref = "/#contact"
+  buttonHref = "/#contact",
 } = Astro.props;
 ---
 
@@ -17,17 +19,32 @@ const {
   <div class="last-cta">
     <div class="w-layout-blockcontainer container w-container">
       <div class="last-cta-conponent">
-        <div data-w-id="4b8f4f01-6181-b7d6-f567-f70c9e9c2771" class="last-cta-wrap">
-          <div class="text-block">{text}</div>
-        </div>
-        <div data-w-id="4b8f4f01-6181-b7d6-f567-f70c9e9c2774" class="last-cta-button-wrap">
-          <a href={buttonHref} data-w-id="4b8f4f01-6181-b7d6-f567-f70c9e9c2775" class="button grey w-inline-block">
+        <DisplayTitle
+          text={text}
+          dataWId="4b8f4f01-6181-b7d6-f567-f70c9e9c2771"
+        />
+        <div
+          data-w-id="4b8f4f01-6181-b7d6-f567-f70c9e9c2774"
+          class="last-cta-button-wrap"
+        >
+          <a
+            href={buttonHref}
+            data-w-id="4b8f4f01-6181-b7d6-f567-f70c9e9c2775"
+            class="button grey w-inline-block"
+          >
             <div class="button-wrapper">
               <div class="button-icon white">
-                <img loading="lazy" src="/img/69002c5230201afdd240afef_Arrow Footer.svg" alt="Arrow" class="icon invert" />
+                <img
+                  loading="lazy"
+                  src="/img/69002c5230201afdd240afef_Arrow Footer.svg"
+                  alt="Arrow"
+                  class="icon invert"
+                />
               </div>
               <div class="button-text-color margin-right">
-                <div class="text-size-medium text-weight-medium">{buttonText}</div>
+                <div class="text-size-medium text-weight-medium">
+                  {buttonText}
+                </div>
               </div>
               <div class="button-icon absolute white"></div>
             </div>
@@ -37,16 +54,36 @@ const {
     </div>
     <div class="cta-images-wrap">
       <div class="cta-image is-first">
-        <img src="/img/floating-1.png" loading="lazy" sizes="100vw" alt="Floating 1" />
+        <img
+          src="/img/floating-1.png"
+          loading="lazy"
+          sizes="100vw"
+          alt="Floating 1"
+        />
       </div>
       <div class="cta-image is-second">
-        <img src="/img/floating-2.png" loading="lazy" sizes="100vw" alt="Floating 2" />
+        <img
+          src="/img/floating-2.png"
+          loading="lazy"
+          sizes="100vw"
+          alt="Floating 2"
+        />
       </div>
       <div class="cta-image is-third">
-        <img src="/img/floating-3.png" loading="lazy" sizes="100vw" alt="Floating 3" />
+        <img
+          src="/img/floating-3.png"
+          loading="lazy"
+          sizes="100vw"
+          alt="Floating 3"
+        />
       </div>
       <div class="cta-image is-fourth">
-        <img src="/img/floating-4.png" loading="lazy" sizes="100vw" alt="Floating 4" />
+        <img
+          src="/img/floating-4.png"
+          loading="lazy"
+          sizes="100vw"
+          alt="Floating 4"
+        />
       </div>
     </div>
     <div class="sticky-gradient"></div>

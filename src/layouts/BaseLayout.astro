@@ -8,13 +8,15 @@ interface Props {
   description?: string;
   ogImage?: string;
   wfPage?: string;
+  navTheme?: "dark" | "white";
 }
 
 const {
   title = "Puenter Agency",
   description = "We place great emphasis on providing designers, artists, and brands with designs that elevates their visual communication.",
   ogImage = "/img/opengraph.jpg",
-  wfPage = "69003b725c09305a7640a56a"
+  wfPage = "69003b725c09305a7640a56a",
+  navTheme = "dark"
 } = Astro.props;
 ---
 
@@ -184,7 +186,7 @@ const {
 </head>
 
 <body>
-  <Navbar />
+  <Navbar theme={navTheme} />
 
   <main>
     <slot />

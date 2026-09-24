@@ -1,5 +1,11 @@
 ---
 // src/components/Navbar.astro
+interface Props {
+  theme?: "dark" | "white";
+}
+
+const { theme = "dark" } = Astro.props;
+const isWhite = theme === "white";
 ---
 <div class="relative">
   <div data-animation="none" data-collapse="medium" data-duration="400" data-easing="ease" data-easing2="ease"
@@ -7,7 +13,7 @@
     <div class="padding-global">
       <div class="container w-container">
         <div class="component-navbar">
-          <a href="/" class="logo-navbar color-black w-nav-brand" aria-label="Puenter Agency Home">
+          <a href="/" class={`logo-navbar ${isWhite ? "" : "color-black"} w-nav-brand`} aria-label="Puenter Agency Home">
             <div class="w-embed">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 119 119" preserveAspectRatio="xMidYMid meet"
                 style="display:block;width:42px;height:auto" role="img" aria-label="Logo">
@@ -24,25 +30,25 @@
             <div>
               <nav role="navigation" data-w-id="6311028f-aad4-8cc6-cf82-ce2ec10aa774" class="menu-navbar w-nav-menu">
                 <div data-delay="250" data-hover="false" class="nav-link w-dropdown">
-                  <a href="/" class="dropdown-navbar white-mobile w-dropdown-toggle" style="text-decoration:none;">
+                  <a href="/" class={`dropdown-navbar ${isWhite ? "white" : "white-mobile"} w-dropdown-toggle`} style="text-decoration:none;">
                     <div class="text-size-regular">Home</div>
                   </a>
                 </div>
 
                 <div data-delay="250" data-hover="false" class="nav-link w-dropdown">
-                  <a href="/#services" class="dropdown-navbar white-mobile w-dropdown-toggle" style="text-decoration:none;">
+                  <a href="/#services" class={`dropdown-navbar ${isWhite ? "white" : "white-mobile"} w-dropdown-toggle`} style="text-decoration:none;">
                     <div class="text-size-regular">Services</div>
                   </a>
                 </div>
 
                 <div data-delay="250" data-hover="false" class="nav-link w-dropdown">
-                  <a href="/#works" class="dropdown-navbar white-mobile w-dropdown-toggle" style="text-decoration:none;">
+                  <a href="/#works" class={`dropdown-navbar ${isWhite ? "white" : "white-mobile"} w-dropdown-toggle`} style="text-decoration:none;">
                     <div class="text-size-regular">Work</div>
                   </a>
                 </div>
 
                 <div data-delay="250" data-hover="false" class="nav-link w-dropdown">
-                  <a href="/#contact" class="dropdown-navbar white-mobile w-dropdown-toggle" style="text-decoration:none;">
+                  <a href="/#contact" class={`dropdown-navbar ${isWhite ? "white" : "white-mobile"} w-dropdown-toggle`} style="text-decoration:none;">
                     <div class="text-size-regular">Contact Us</div>
                   </a>
                 </div>
@@ -54,7 +60,11 @@
                   <a href="/#contact" class="link-block-navbar w-inline-block">
                     <div>Contact</div>
                   </a>
-                  <a href="/#contact" class="navbar-button hide-mobile w-inline-block">
+                  <a
+                    href="/#contact"
+                    data-w-id={isWhite ? "ca849023-c6b5-abfa-3de9-378658afbdd6" : "5a8c2e0e-7935-386a-c2f8-4e54afa99ba5"}
+                    class="navbar-button hide-mobile w-inline-block"
+                  >
                     <div class="button-navbar-wrapper">
                       <div class="button-icon-navbar">
                         <img loading="lazy" src="/img/69002c5230201afdd240afef_Arrow Footer.svg" alt="Arrow" class="icon-navbar" />
@@ -68,8 +78,8 @@
                 </div>
               </nav>
               <div class="menu-navbar-wrap">
-                <div class="menu-navbar-button black-mobile w-nav-button">
-                  <svg class="menu-icon-navbar black-mobile" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                <div class={`menu-navbar-button ${isWhite ? "" : "black-mobile"} w-nav-button`}>
+                  <svg class={`menu-icon-navbar ${isWhite ? "" : "black-mobile"}`} width="24" height="24" viewBox="0 0 24 24" fill="none"
                     xmlns="http://www.w3.org/2000/svg" style="display: block; width: 24px; height: 24px;">
                     <path class="line-top" d="M4 6H20" stroke="currentColor" stroke-width="3" stroke-linecap="round" />
                     <path class="line-middle" d="M4 12H20" stroke="currentColor" stroke-width="3" stroke-linecap="round" />
@@ -79,21 +89,25 @@
               </div>
             </div>
             <div class="right-navbar-content">
-              <a href="/#works" class="link-block-navbar black w-inline-block">
+              <a href="/#works" class={`link-block-navbar ${isWhite ? "" : "black"} w-inline-block`}>
                 <div>Projects</div>
               </a>
-              <a href="/#contact" class="link-block-navbar black w-inline-block">
+              <a href="/#contact" class={`link-block-navbar ${isWhite ? "" : "black"} w-inline-block`}>
                 <div>Contact</div>
               </a>
-              <a href="/#contact" class="navbar-button w-inline-block">
+              <a
+                href="/#contact"
+                data-w-id={isWhite ? "ca849023-c6b5-abfa-3de9-378658afbde8" : "3f032f9f-5fa5-d6c3-4e5e-1955f8d57e73"}
+                class="navbar-button w-inline-block"
+              >
                 <div class="button-navbar-wrapper">
-                  <div class="button-icon-navbar white">
-                    <img loading="lazy" src="/img/69002c5230201afdd240afef_Arrow Footer.svg" alt="Arrow" class="icon-navbar invet" />
+                  <div class={`button-icon-navbar ${isWhite ? "white" : ""}`}>
+                    <img loading="lazy" src="/img/69002c5230201afdd240afef_Arrow Footer.svg" alt="Arrow" class={`icon-navbar ${isWhite ? "invet" : ""}`} />
                   </div>
-                  <div class="button-navbar-text-color margin-right text-color-white">
+                  <div class={`button-navbar-text-color margin-right ${isWhite ? "text-color-white" : ""}`}>
                     <div class="text-size-medium">Get started</div>
                   </div>
-                  <div class="button-icon-navbar absolute white"></div>
+                  <div class={`button-icon-navbar absolute ${isWhite ? "white" : ""}`}></div>
                 </div>
               </a>
             </div>

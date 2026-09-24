@@ -1,9 +1,17 @@
 ---
 // src/components/ClientsMarquee.astro
+import DisplayTitle from "./DisplayTitle.astro";
+
 interface Client {
   name: string;
   logo: string;
 }
+
+interface Props {
+  title?: string;
+}
+
+const { title = "Trusted by" } = Astro.props;
 
 const baseClients: Client[] = [
   { name: "Everpure", logo: "/img/clients-everpure.svg" },
@@ -17,35 +25,47 @@ const clients = [...baseClients, ...baseClients];
 ---
 
 <section class="clients-section" aria-label="Nuestros Clientes">
+  {
+    title && (
+      <div class="clients-header">
+        <DisplayTitle text={title} />
+      </div>
+    )
+  }
+
   <div class="padding-global">
     <div class="clients-marquee-wrapper">
       <div class="marquee-track">
         <!-- Grupo 1 -->
         <div class="marquee-group">
-          {clients.map((client) => (
-            <div class="client-item">
-              <img
-                src={client.logo}
-                alt={client.name}
-                loading="lazy"
-                class="client-logo"
-              />
-            </div>
-          ))}
+          {
+            clients.map((client) => (
+              <div class="client-item">
+                <img
+                  src={client.logo}
+                  alt={client.name}
+                  loading="lazy"
+                  class="client-logo"
+                />
+              </div>
+            ))
+          }
         </div>
 
         <!-- Grupo 2 (Clon para loop continuo seamless) -->
         <div class="marquee-group" aria-hidden="true">
-          {clients.map((client) => (
-            <div class="client-item">
-              <img
-                src={client.logo}
-                alt=""
-                loading="lazy"
-                class="client-logo"
-              />
-            </div>
-          ))}
+          {
+            clients.map((client) => (
+              <div class="client-item">
+                <img
+                  src={client.logo}
+                  alt=""
+                  loading="lazy"
+                  class="client-logo"
+                />
+              </div>
+            ))
+          }
         </div>
       </div>
     </div>
@@ -56,8 +76,17 @@ const clients = [...baseClients, ...baseClients];
   .clients-section {
     position: relative;
     width: 100%;
-    padding: 3rem 0;
+    padding: 3.5rem 0;
     overflow: hidden;
+  }
+
+  .clients-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2.5rem;
+    padding: 0 1.5rem;
+    width: 100%;
   }
 
   .clients-marquee-wrapper {
@@ -121,7 +150,10 @@ const clients = [...baseClients, ...baseClients];
     object-fit: contain;
     opacity: 0.65;
     filter: brightness(0.9);
-    transition: opacity 0.3s ease, filter 0.3s ease, transform 0.3s ease;
+    transition:
+      opacity 0.3s ease,
+      filter 0.3s ease,
+      transform 0.3s ease;
   }
 
   .client-item:hover .client-logo {

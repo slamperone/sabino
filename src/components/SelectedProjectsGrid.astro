@@ -1,0 +1,71 @@
+---
+// src/components/SelectedProjectsGrid.astro
+import WorkCard from "./WorkCard.astro";
+import { projects as allProjects, type Project } from "../data/projects";
+
+interface Props {
+  currentHref?: string;
+  count?: number;
+  wrapperClass?: string;
+  projects?: Project[];
+  cardId?: string;
+  hoverId?: string;
+  marqueeId?: string;
+}
+
+const {
+  currentHref = Astro.url.pathname,
+  count = 2,
+  wrapperClass = "white-wrapper",
+  projects = allProjects,
+  cardId = "1f31c30e-2bd5-8c2d-ee1f-7bbb620cabd1",
+  hoverId = "1f31c30e-2bd5-8c2d-ee1f-7bbb620cabd3",
+  marqueeId = "1f31c30e-2bd5-8c2d-ee1f-7bbb620cabd8",
+} = Astro.props;
+
+// Normalizar la URL actual para excluir el proyecto que se está visualizando
+const normalizedCurrent = currentHref ? currentHref.replace(/\/$/, "") : "";
+
+const availableProjects = projects.filter((p) => {
+  const normalizedHref = p.href.replace(/\/$/, "");
+  return normalizedHref !== normalizedCurrent;
+});
+
+// Barajado aleatorio (Fisher-Yates)
+const shuffled = [...availableProjects];
+for (let i = shuffled.length - 1; i > 0; i--) {
+  const j = Math.floor(Math.random() * (i + 1));
+  [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+}
+
+const selectedProjects = shuffled.slice(0, count);
+---
+
+<div class={wrapperClass}>
+  <section>
+    <div class="padding-global">
+      <div class="works-cards-wrapper">
+        <div class="work-cards-content">
+          <div class="work-small-card-wrapper">
+            <div class="card-collection-list-wrapper w-dyn-list">
+              <div role="list" class="work-small-card-list w-dyn-items">
+                {
+                  selectedProjects.map((project) => (
+                    <WorkCard
+                      title={project.title}
+                      href={project.href}
+                      imgSrc={project.imgSrc}
+                      cardId={cardId}
+                      hoverId={hoverId}
+                      marqueeId={marqueeId}
+                    />
+                  ))
+                }
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

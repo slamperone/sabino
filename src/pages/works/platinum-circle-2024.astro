@@ -1,0 +1,187 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import BottomNavbar from "../../components/BottomNavbar.astro";
+import SelectedProjectsGrid from "../../components/SelectedProjectsGrid.astro";
+import LastCta from "../../components/LastCta.astro";
+import DisplayTitle from "../../components/DisplayTitle.astro";
+
+const { title = "Platinum Circle 2024" } = Astro.props;
+---
+
+<BaseLayout
+  title="Platinum Circle 2024"
+  description="An iconic project meticulously curated by us."
+  ogImage="/img/steeeezy/steeeezy-hero.jpg"
+  wfPage="69002c5230201afdd240ad49"
+  navTheme="white"
+>
+  <BottomNavbar />
+
+  <!-- Project Heading -->
+  <section>
+    <div class="padding-global">
+      <div class="w-layout-blockcontainer container w-container">
+        <div class="margin-top-15vh">
+          <div class="hero-content-wrapper">
+            <div class="hero-heading-content max-width-100">
+              {
+                title && (
+                  <div class="clients-header margin-bottom-10vh margin-top-10vh">
+                    <DisplayTitle text={title} />
+                  </div>
+                )
+              }
+              <div class="rich-text align-center w-richtext">
+                <h4>
+                  <span class="text-weight-bold">End Client:</span> BCD Meetings &
+                  Events |
+                  <span class="text-weight-bold">Services:</span> Art Direction, Event
+                  Branding
+                </h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Project Hero Image -->
+  <section>
+    <div
+      data-w-id="0b4fc445-652d-5de3-a1c2-e45bf38fcd4f"
+      style="opacity:0"
+      class="blog-image-wrapper"
+    >
+      <img
+        style="-webkit-transform:translate3d(0, 0, 0) scale3d(1.2, 1.2, 1);transform:translate3d(0, 0, 0) scale3d(1.2, 1.2, 1)"
+        alt="Steeeezy"
+        src="/img/works/platinum-circle-2024/work_2-1.jpg"
+        loading="lazy"
+        class="image"
+      />
+      <div style="height:100%" class="mask-frame"></div>
+    </div>
+  </section>
+
+  <!-- Project Case Study Content -->
+  <section>
+    <div class="w-layout-blockcontainer container w-container">
+      <div class="works-template">
+        <div class="work-content">
+          <div class="rich-text align-center w-richtext">
+            <h3>
+              Platinum Circle is BCD Meetings & Events’ global recognition
+              program, celebrating employees who embody the company’s values and
+              go beyond expectations. For its 2024 edition, winners from around
+              the world were invited to Costa Mujeres, Mexico, for a recognition
+              experience designed to feel as special as the achievement itself.
+            </h3>
+          </div>
+        </div>
+        <div class="work-template-images margin-bottom">
+          <img
+            alt="platinum-circle-2024"
+            loading="lazy"
+            src="/img/works/platinum-circle-2024/work_2-3.jpg"
+            class="image"
+          />
+          <div class="mask-frame"></div>
+        </div>
+
+        <div class="work-content">
+          <div class="rich-text align-center w-richtext">
+            <h3>Recognition, rooted in place.</h3>
+            <h3>
+              Rather than treating the destination as decoration, the identity
+              translates it into a set of visual cues. Gold speaks to
+              achievement, deep green grounds the experience in its tropical
+              setting, and abstract jaguar markings introduce a subtle reference
+              to Mayan culture. Circular forms tie the system back to Platinum
+              Circle itself, bringing each element into a cohesive language
+              built around recognition and place.
+            </h3>
+          </div>
+        </div>
+
+        <div class="work-template-images margin-bottom">
+          <img
+            alt="Platinum Circle 2024"
+            loading="lazy"
+            src="/img/works/platinum-circle-2024/work_2-4.jpg"
+            class="image"
+          />
+          <div class="mask-frame"></div>
+        </div>
+        <div class="work-content">
+          <div class="rich-text align-center w-richtext">
+            <h3>
+              The system was designed to extend seamlessly across digital
+              communications, presentations, credentials, signage, gifting, and
+              event collateral.
+            </h3>
+          </div>
+        </div>
+        <!-- guardar por que lo vamos a usar en los demas proyectos-->
+        <div class="work-template-images vertical">
+          <img
+            alt="Steeeezy Project 04"
+            loading="lazy"
+            src="/img/works/platinum-circle-2024/work_2-2.jpg"
+            class="image"
+          />
+          <div class="mask-frame"></div>
+        </div>
+        <div class="work-template-images vertical right">
+          <img
+            alt="Platinum Circle 2024"
+            loading="lazy"
+            src="/img/works/platinum-circle-2024/work_2-5.jpg"
+            class="image"
+          />
+          <div class="mask-frame"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Intermediate CTA Section -->
+  <section>
+    <div class="white-wrapper">
+      <div class="padding-global">
+        <div class="w-layout-blockcontainer container medium w-container">
+          <div class="cta-component">
+            <div class="cta-wrapper">
+              <div class="marquee-tag">
+                <div class="marquee-tag-wrapper">
+                  <div class="text-size-small caps">selected projects</div>
+                  <div class="elipse"></div>
+                </div>
+                <div class="marquee-tag-wrapper">
+                  <div class="text-size-small caps">selected projects</div>
+                  <div class="elipse"></div>
+                </div>
+                <div class="marquee-tag-wrapper">
+                  <div class="text-size-small caps">selected projects</div>
+                  <div class="elipse"></div>
+                </div>
+              </div>
+              <div class="cta">
+                <div class="text-size-xdisplay line-height-122 about-style">
+                  Strategic thinking. Thoughtful execution. Designed to connect,
+                  engage, and move brands forward.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Selected Projects Grid -->
+  <SelectedProjectsGrid />
+
+  <!-- Last CTA -->
+  <LastCta />
+</BaseLayout>

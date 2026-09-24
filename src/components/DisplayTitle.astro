@@ -1,0 +1,65 @@
+---
+// src/components/DisplayTitle.astro
+interface Props {
+  text?: string;
+  as?: 'h1' | 'h2' | 'h3' | 'div' | 'p';
+  class?: string;
+  dataWId?: string;
+  maxWidth?: string;
+}
+
+const {
+  text,
+  as: Tag = 'h2',
+  class: className = '',
+  dataWId,
+  maxWidth,
+} = Astro.props;
+---
+
+<div
+  class:list={['last-cta-wrap', 'display-title-wrap', className]}
+  data-w-id={dataWId}
+  style={maxWidth ? `max-width: ${maxWidth};` : undefined}
+>
+  <Tag class="text-block display-title-text">
+    {text ? text : <slot />}
+  </Tag>
+</div>
+
+<style>
+  .display-title-wrap {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    text-align: center;
+  }
+
+  .display-title-text {
+    font-family: var(--font--bomboniere, degular-display, sans-serif);
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 4.7vw;
+    font-weight: 700;
+    line-height: 1;
+    margin: 0;
+  }
+
+  @media screen and (max-width: 991px) {
+    .display-title-text {
+      font-size: 4rem;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    .display-title-text {
+      font-size: 3rem;
+    }
+  }
+
+  @media screen and (max-width: 479px) {
+    .display-title-text {
+      font-size: 2rem;
+    }
+  }
+</style>
