@@ -30,15 +30,6 @@ const availableProjects = projects.filter((p) => {
   const normalizedHref = p.href.replace(/\/$/, "");
   return normalizedHref !== normalizedCurrent;
 });
-
-// Barajado aleatorio (Fisher-Yates)
-const shuffled = [...availableProjects];
-for (let i = shuffled.length - 1; i > 0; i--) {
-  const j = Math.floor(Math.random() * (i + 1));
-  [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
-}
-
-const selectedProjects = shuffled.slice(0, count);
 ---
 
 <div class={wrapperClass}>
@@ -48,9 +39,13 @@ const selectedProjects = shuffled.slice(0, count);
         <div class="work-cards-content">
           <div class="work-small-card-wrapper">
             <div class="card-collection-list-wrapper w-dyn-list">
-              <div role="list" class="work-small-card-list w-dyn-items">
+              <div
+                role="list"
+                class="work-small-card-list w-dyn-items random-projects-container"
+                data-count={count}
+              >
                 {
-                  selectedProjects.map((project) => (
+                  availableProjects.map((project) => (
                     <WorkCard
                       title={project.title}
                       href={project.href}
@@ -69,3 +64,32 @@ const selectedProjects = shuffled.slice(0, count);
     </div>
   </section>
 </div>
+
+<script is:inline>
+  (function () {
+    var containers = document.querySelectorAll(".random-projects-container");
+    containers.forEach(function (container) {
+      var items = Array.prototype.slice.call(container.children);
+      var count = parseInt(container.getAttribute("data-count") || "2", 10);
+      if (items.length <= count) return;
+
+      // Barajar aleatoriamente usando Fisher-Yates en el navegador
+      for (var i = items.length - 1; i > 0; i--) {
+        var j = Math.floor(Math.random() * (i + 1));
+        var temp = items[i];
+        items[i] = items[j];
+        items[j] = temp;
+      }
+
+      var keep = items.slice(0, count);
+      var remove = items.slice(count);
+
+      remove.forEach(function (el) {
+        el.remove();
+      });
+      keep.forEach(function (el) {
+        container.appendChild(el);
+      });
+    });
+  })();
+</script>
