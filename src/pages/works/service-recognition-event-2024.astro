@@ -1,0 +1,188 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import BottomNavbar from "../../components/BottomNavbar.astro";
+import SelectedProjectsGrid from "../../components/SelectedProjectsGrid.astro";
+import LastCta from "../../components/LastCta.astro";
+import DisplayTitle from "../../components/DisplayTitle.astro";
+
+const { title = "Service Recognition Event 2024" } = Astro.props;
+---
+
+<BaseLayout
+  title="Service Recognition Event 2024"
+  description="An iconic project meticulously curated by us."
+  ogImage="/img/steeeezy/steeeezy-hero.jpg"
+  wfPage="69002c5230201afdd240ad49"
+  navTheme="white"
+>
+  <BottomNavbar />
+
+  <!-- Project Heading -->
+  <section>
+    <div class="padding-global">
+      <div class="w-layout-blockcontainer container w-container">
+        <div class="margin-top-15vh">
+          <div class="hero-content-wrapper">
+            <div class="hero-heading-content max-width-100">
+              {
+                title && (
+                  <div class="clients-header margin-bottom-10vh margin-top-10vh">
+                    <DisplayTitle text={title} />
+                  </div>
+                )
+              }
+              <div class="rich-text align-center w-richtext">
+                <h4>
+                  <span class="text-weight-bold">End Client:</span> Grainger |
+                  <span class="text-weight-bold">Partner:</span> BCD Meetings & Events
+                  |
+                  <span class="text-weight-bold">Services:</span> Art Direction, Event
+                  Branding
+                </h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Project Hero Image -->
+  <section>
+    <div
+      data-w-id="0b4fc445-652d-5de3-a1c2-e45bf38fcd4f"
+      style="opacity:0"
+      class="blog-image-wrapper"
+    >
+      <img
+        style="-webkit-transform:translate3d(0, 0, 0) scale3d(1.2, 1.2, 1);transform:translate3d(0, 0, 0) scale3d(1.2, 1.2, 1)"
+        alt="Steeeezy"
+        src="/img/works/service-recognition-event-2024/work_3-1.jpg"
+        loading="lazy"
+        class="image"
+      />
+      <div style="height:100%" class="mask-frame"></div>
+    </div>
+  </section>
+
+  <!-- Project Case Study Content -->
+  <section>
+    <div class="w-layout-blockcontainer container w-container">
+      <div class="works-template">
+        <div class="work-content">
+          <div class="rich-text align-center w-richtext">
+            <h3>
+              Grainger’s annual Service Recognition Event honors employees
+              reaching 25 years with the company. For its 2024 edition in
+              Chicago, honorees and their guests came together for a multi-day
+              celebration designed to give that milestone the sense of occasion
+              it deserved.
+            </h3>
+          </div>
+        </div>
+        <div class="work-template-images margin-bottom">
+          <img
+            alt="service-recognition-event-2024"
+            loading="lazy"
+            src="/img/works/service-recognition-event-2024/work_3-2.jpg"
+            class="image"
+          />
+          <div class="mask-frame"></div>
+        </div>
+
+        <div class="work-content">
+          <div class="rich-text align-center w-richtext">
+            <h3>
+              Stepping beyond Grainger’s everyday brand system, the identity
+              draws from Art Deco geometry and the sense of ceremony associated
+              with the era. Layered linework, symmetrical forms, and a
+              black-and-gold palette create an elevated visual language centered
+              on recognition, while abstract light and movement bring a
+              contemporary energy to the system rather than treating the
+              aesthetic as literal nostalgia.
+            </h3>
+          </div>
+        </div>
+
+        <div class="work-template-images margin-bottom">
+          <img
+            alt="service-recognition-event-2024"
+            loading="lazy"
+            src="/img/works/service-recognition-event-2024/work_3-3.jpg"
+            class="image"
+          />
+          <div class="mask-frame"></div>
+        </div>
+        <div class="work-content">
+          <div class="rich-text align-center w-richtext">
+            <h3>
+              The identity extends across invitations, credentials, event
+              publications, signage, digital communications, and environmental
+              graphics, creating a consistent experience built around one idea:
+              making a 25-year milestone feel genuinely significant.
+            </h3>
+          </div>
+        </div>
+        <!-- guardar por que lo vamos a usar en los demas proyectos-->
+        <div class="work-template-images vertical">
+          <img
+            alt="service-recognition-event-2024"
+            loading="lazy"
+            src="/img/works/service-recognition-event-2024/work_3-4.jpg"
+            class="image"
+          />
+          <div class="mask-frame"></div>
+        </div>
+        <div class="work-template-images vertical right">
+          <img
+            alt="service-recognition-event-2024"
+            loading="lazy"
+            src="/img/works/service-recognition-event-2024/work_3-5.jpg"
+            class="image"
+          />
+          <div class="mask-frame"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Intermediate CTA Section -->
+  <section>
+    <div class="white-wrapper">
+      <div class="padding-global">
+        <div class="w-layout-blockcontainer container medium w-container">
+          <div class="cta-component">
+            <div class="cta-wrapper">
+              <div class="marquee-tag">
+                <div class="marquee-tag-wrapper">
+                  <div class="text-size-small caps">selected projects</div>
+                  <div class="elipse"></div>
+                </div>
+                <div class="marquee-tag-wrapper">
+                  <div class="text-size-small caps">selected projects</div>
+                  <div class="elipse"></div>
+                </div>
+                <div class="marquee-tag-wrapper">
+                  <div class="text-size-small caps">selected projects</div>
+                  <div class="elipse"></div>
+                </div>
+              </div>
+              <div class="cta">
+                <div class="text-size-xdisplay line-height-122 about-style">
+                  Strategic thinking. Thoughtful execution. Designed to connect,
+                  engage, and move brands forward.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Selected Projects Grid -->
+  <SelectedProjectsGrid />
+
+  <!-- Last CTA -->
+  <LastCta />
+</BaseLayout>

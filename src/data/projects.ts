@@ -21,12 +21,12 @@ export const projects: Project[] = [
   },
   {
     title: "Service Recognition Event 2024",
-    href: "/works/steeeezy",
+    href: "/works/service-recognition-event-2024",
     imgSrc: "/img/home-work-3.jpg",
   },
   {
     title: "Sunglass Hut Summit 2023",
-    href: "/works/model-911",
+    href: "/works/sunglass-hut-summit-2023",
     imgSrc: "/img/home-work-4.jpg",
   },
 ];
