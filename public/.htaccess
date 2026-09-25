@@ -1,0 +1,21 @@
+# Apache configuration for https://develupme.com/sabino/
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /sabino/
+
+  # If an existing file or directory is requested, serve it directly
+  RewriteCond %{REQUEST_FILENAME} -f [OR]
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule ^ - [L]
+
+  # Allow clean URLs without trailing slash to load their index.html
+  RewriteRule ^works/?$ works/index.html [L]
+  RewriteRule ^works/([^/]+)/?$ works/$1/index.html [L]
+
+  # Fallback to index.html
+  ErrorDocument 404 /sabino/index.html
+</IfModule>
+
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript application/json image/svg+xml
+</IfModule>

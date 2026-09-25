@@ -1,0 +1,71 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import BottomNavbar from "../../components/BottomNavbar.astro";
+import LastCta from "../../components/LastCta.astro";
+import DisplayTitle from "../../components/DisplayTitle.astro";
+import WorkCard from "../../components/WorkCard.astro";
+import { projects } from "../../data/projects";
+
+const { title = "Our Work" } = Astro.props;
+---
+
+<BaseLayout
+  title="Our Work"
+  description="An iconic project meticulously curated by us."
+  ogImage="/img/steeeezy/steeeezy-hero.jpg"
+  wfPage="69002c5230201afdd240ad49"
+  navTheme="white"
+>
+  <BottomNavbar />
+
+  <!-- Project Heading -->
+  <section>
+    <div class="padding-global">
+      <div class="w-layout-blockcontainer container w-container">
+        <div class="margin-top-15vh">
+          <div class="hero-content-wrapper">
+            <div class="hero-heading-content max-width-100">
+              {
+                title && (
+                  <div class="clients-header margin-bottom-10vh margin-top-10vh">
+                    <DisplayTitle text={title} />
+                  </div>
+                )
+              }
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Selected Projects Grid -->
+  <div class="gray-wrapper">
+    <section>
+      <div class="padding-global">
+        <div class="works-cards-wrapper">
+          <div class="work-cards-content">
+            <div class="work-small-card-wrapper">
+              <div class="card-collection-list-wrapper w-dyn-list">
+                <div role="list" class="work-small-card-list w-dyn-items">
+                  {
+                    projects.map((project) => (
+                      <WorkCard
+                        title={project.title}
+                        href={project.href}
+                        imgSrc={project.imgSrc}
+                      />
+                    ))
+                  }
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Last CTA -->
+  <LastCta />
+</BaseLayout>
