@@ -29,4 +29,24 @@ export const projects: Project[] = [
     href: "/works/sunglass-hut-summit-2023",
     imgSrc: "/img/home-work-4.jpg",
   },
+  {
+    title: "Invitational 2025",
+    href: "/works/invitational-2025",
+    imgSrc: "/img/home-work-5.jpg",
+  },
+  {
+    title: "Thinking Forward Forum 2025",
+    href: "/works/thinking-forward-forum-2025",
+    imgSrc: "/img/home-work-6.jpg",
+  },
+  {
+    title: "President's Awards 2024",
+    href: "/works/presidents-awards-2024",
+    imgSrc: "/img/home-work-7.jpg",
+  },
+  {
+    title: "Winners Circle 2024",
+    href: "/works/winners-circle-2024",
+    imgSrc: "/img/home-work-8.jpg",
+  },
 ];

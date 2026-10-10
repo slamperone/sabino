@@ -1,0 +1,172 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import BottomNavbar from "../../components/BottomNavbar.astro";
+import SelectedProjectsGrid from "../../components/SelectedProjectsGrid.astro";
+import LastCta from "../../components/LastCta.astro";
+import DisplayTitle from "../../components/DisplayTitle.astro";
+
+const { title = "Invitational 2025" } = Astro.props;
+---
+
+<BaseLayout
+  title="Invitational 2025"
+  description="Spirit of Goodyear Invitational 2025 event branding and collateral."
+  ogImage="/img/home-work-5.jpg"
+  wfPage="69002c5230201afdd240ad49"
+  navTheme="white"
+>
+  <BottomNavbar />
+
+  <!-- Project Heading -->
+  <section>
+    <div class="padding-global">
+      <div class="w-layout-blockcontainer container w-container">
+        <div class="margin-top-15vh">
+          <div class="hero-content-wrapper">
+            <div class="hero-heading-content max-width-100">
+              {
+                title && (
+                  <div class="clients-header margin-bottom-10vh margin-top-10vh">
+                    <DisplayTitle text={title} />
+                  </div>
+                )
+              }
+              <div class="rich-text align-center w-richtext">
+                <h4>
+                  <span class="text-weight-bold">End Client:</span> Goodyear |
+                  <span class="text-weight-bold">Partner:</span> BCD Meetings & Events
+                  |
+                  <span class="text-weight-bold">Services:</span> Graphic Design,
+                  Event Branding
+                </h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Project Hero Image -->
+  <section>
+    <div
+      data-w-id="0b4fc445-652d-5de3-a1c2-e45bf38fcd4f"
+      style="opacity:0"
+      class="blog-image-wrapper"
+    >
+      <img
+        style="-webkit-transform:translate3d(0, 0, 0) scale3d(1.2, 1.2, 1);transform:translate3d(0, 0, 0) scale3d(1.2, 1.2, 1)"
+        alt="Spirit of Goodyear Invitational 2025"
+        src="/img/works/invitational-2025/work_5-2.jpg"
+        loading="lazy"
+        class="image"
+      />
+      <div style="height:100%" class="mask-frame"></div>
+    </div>
+  </section>
+
+  <!-- Project Case Study Content -->
+  <section>
+    <div class="w-layout-blockcontainer container w-container">
+      <div class="works-template">
+        <div class="work-content">
+          <div class="rich-text align-center w-richtext">
+            <h3>
+              The Goodyear Invitational brought together top dealers,
+              leadership, and guests from the U.S. and Canada for a multi-day
+              experience at the Four Seasons Resort Nevis. For an audience
+              already familiar with high-end travel, the challenge was not
+              simply to sell the destination, but to create a sense of arrival,
+              care, and exclusivity from the first touchpoint.
+            </h3>
+          </div>
+        </div>
+
+        <div class="work-template-images margin-bottom">
+          <img
+            alt="Invitational 2025 Program of Events"
+            loading="lazy"
+            src="/img/works/invitational-2025/work_5-1.jpg"
+            class="image"
+          />
+          <div class="mask-frame"></div>
+        </div>
+
+        <div class="work-content">
+          <div class="rich-text align-center w-richtext">
+            <h3>
+              The identity takes a quiet, refined approach to the Caribbean
+              setting. Rather than relying on expected resort imagery, a minimal
+              botanical illustration becomes the main visual cue, paired with
+              fine gold details, generous space, and a restrained composition
+              designed to feel more personal and considered.
+            </h3>
+          </div>
+        </div>
+
+        <div class="work-template-images margin-bottom">
+          <img
+            alt="Welcome to Nevis Guide"
+            loading="lazy"
+            src="/img/works/invitational-2025/work_5-3.jpg"
+            class="image"
+          />
+          <div class="mask-frame"></div>
+        </div>
+
+        <div class="work-content">
+          <div class="rich-text align-center w-richtext">
+            <h3>
+              Goodyear’s deep blue keeps the system connected to the brand,
+              while the gold accents and simplified floral linework introduce a
+              softer tone. Across program books, welcome materials,
+              presentations, tabletop pieces, and digital applications, the goal
+              was to make the experience feel less like another destination
+              event and more like a carefully hosted retreat.
+            </h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Intermediate CTA Section -->
+  <section>
+    <div class="white-wrapper">
+      <div class="padding-global">
+        <div class="w-layout-blockcontainer container medium w-container">
+          <div class="cta-component">
+            <div class="cta-wrapper">
+              <div class="marquee-tag">
+                <div class="marquee-tag-wrapper">
+                  <div class="text-size-small caps">selected projects</div>
+                  <div class="elipse"></div>
+                </div>
+                <div class="marquee-tag-wrapper">
+                  <div class="text-size-small caps">selected projects</div>
+                  <div class="elipse"></div>
+                </div>
+                <div class="marquee-tag-wrapper">
+                  <div class="text-size-small caps">selected projects</div>
+                  <div class="elipse"></div>
+                </div>
+              </div>
+              <div class="cta">
+                <div class="text-size-xdisplay line-height-122 about-style">
+                  Strategic thinking. Thoughtful execution. Designed to connect,
+                  engage, and move brands forward.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Selected Projects Grid -->
+  <SelectedProjectsGrid />
+
+  <!-- Last CTA -->
+  <LastCta />
+</BaseLayout>
