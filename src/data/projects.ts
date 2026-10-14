@@ -40,8 +40,8 @@ export const projects: Project[] = [
     imgSrc: "/img/home-work-6.jpg",
   },
   {
-    title: "President's Awards 2024",
-    href: "/works/presidents-awards-2024",
+    title: "President's Award 2024",
+    href: "/works/presidents-award-2024",
     imgSrc: "/img/home-work-7.jpg",
   },
   {
