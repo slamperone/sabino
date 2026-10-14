@@ -19,6 +19,7 @@ const {
   hoverId = "16ff824f-ee6e-6b46-00bf-bda4ef99dd79",
   marqueeId = "16ff824f-ee6e-6b46-00bf-bda4ef99dd7e"
 } = Astro.props;
+const mobileSrc = imgSrc.replace(/([^/]+)$/, "m-$1");
 ---
 
 <div role="listitem" class="work-small-card-item w-dyn-item">
@@ -29,7 +30,10 @@ const {
       </div>
     </div>
     <div class="big-card-image">
-      <img alt={imgAlt} loading="lazy" src={imgSrc} class="image" />
+      <picture style="display: contents;">
+        <source media="(max-width: 767px)" srcset={mobileSrc} />
+        <img alt={imgAlt} loading="lazy" src={imgSrc} class="image" />
+      </picture>
       <div class="mask-frame"></div>
     </div>
     <div data-w-id={marqueeId} class="works-marquee-wrapper">
