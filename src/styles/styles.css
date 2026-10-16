@@ -7322,6 +7322,7 @@ figure {
   padding: .9rem .7rem;
   display: flex;
   position: relative;
+  transition: background-color 1s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
 .button-icon-navbar.absolute {
@@ -7331,24 +7332,33 @@ figure {
   position: absolute;
   inset: 0%;
   overflow: hidden;
+  background-color: var(--color--energy-green);
 }
 
 .button-icon-navbar.white {
   background-color: var(--color--soft-pearl);
 }
 
-.button-navbar-text-color {
+.navbar-button:hover .button-icon-navbar {
+  background-color: var(--color--energy-green);
+  transition: background-color 1s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.button-navbar-text-color,
+.navbar-button:hover .button-navbar-text-color {
   z-index: 2;
-  color: var(--color--midnight-slate);
+  color: var(--color--midnight-slate) !important;
   position: relative;
+  transition: none !important;
 }
 
 .button-navbar-text-color.margin-right {
   margin-right: 1.1rem;
 }
 
-.button-navbar-text-color.margin-right.text-color-white {
-  color: var(--color--soft-pearl);
+.button-navbar-text-color.margin-right.text-color-white,
+.navbar-button:hover .button-navbar-text-color.margin-right.text-color-white {
+  color: var(--color--soft-pearl) !important;
 }
 
 .button-navbar-wrapper {
@@ -7367,10 +7377,16 @@ figure {
 .icon-navbar {
   object-fit: contain;
   width: 85%;
+  transition: filter 1s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
 .icon-navbar.invet {
   filter: invert();
+}
+
+.navbar-button:hover .icon-navbar {
+  filter: brightness(0.07) !important;
+  transition: filter 1s cubic-bezier(0.77, 0, 0.175, 1);
 }
 
 .bottom-navbar {
