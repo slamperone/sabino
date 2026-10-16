@@ -5420,10 +5420,12 @@ figure {
 }
 
 .footer .button .button-icon.absolute {
-  background-color: var(--color--energy-green);
+  background-color: var(--color--deep-charcoal);
+  transition: background-color 1s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
-.footer .button:hover .button-icon {
+.footer .button:hover .button-icon,
+.footer .button:hover .button-icon.absolute {
   background-color: var(--color--energy-green);
   transition: background-color 0.8s cubic-bezier(0.77, 0, 0.175, 1);
 }
@@ -7361,16 +7363,18 @@ figure {
   position: absolute;
   inset: 0%;
   overflow: hidden;
-  background-color: var(--color--energy-green);
+  background-color: var(--color--deep-charcoal);
+  transition: background-color 1s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
 .button-icon-navbar.white {
   background-color: var(--color--soft-pearl);
 }
 
-.navbar-button:hover .button-icon-navbar {
+.navbar-button:hover .button-icon-navbar,
+.navbar-button:hover .button-icon-navbar.absolute {
   background-color: var(--color--energy-green);
-  transition: background-color 1s cubic-bezier(0.77, 0, 0.175, 1);
+  transition: background-color 0.8s cubic-bezier(0.77, 0, 0.175, 1);
 }
 
 .button-navbar-text-color,
