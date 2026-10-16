@@ -5414,6 +5414,35 @@ figure {
   border-radius: .25rem;
 }
 
+/* Footer CTA "Let's Talk" */
+.footer .button .button-icon {
+  transition: background-color 1s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.footer .button .button-icon.absolute {
+  background-color: var(--color--energy-green);
+}
+
+.footer .button:hover .button-icon {
+  background-color: var(--color--energy-green);
+  transition: background-color 0.8s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.footer .button .icon {
+  transition: filter 1s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.footer .button:hover .icon {
+  filter: brightness(0.07) !important;
+  transition: filter 0.8s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.footer .button .button-text-color,
+.footer .button:hover .button-text-color {
+  color: var(--color--deep-charcoal) !important;
+  transition: none !important;
+}
+
 .footer-social-link {
   grid-column-gap: .3rem;
   grid-row-gap: .3rem;
@@ -7846,6 +7875,7 @@ figure {
 
 .main-button-navbar:hover {
   color: var(--color--deep-charcoal);
+  background-color: var(--color--energy-green);
 }
 
 .main-button-navbar.button-hero {
