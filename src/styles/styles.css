@@ -7875,7 +7875,6 @@ figure {
 
 .main-button-navbar:hover {
   color: var(--color--deep-charcoal);
-  background-color: var(--color--energy-green);
 }
 
 .main-button-navbar.button-hero {
@@ -7885,6 +7884,11 @@ figure {
 .main-button-navbar.button-hero.mobile {
   background-color: var(--color--deep-charcoal);
   margin-left: .5rem;
+}
+
+.main-button-navbar .button-mask-pricing.green {
+  border-color: var(--color--energy-green);
+  background-color: var(--color--energy-green);
 }
 
 .submit-button {
