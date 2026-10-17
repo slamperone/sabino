@@ -7207,10 +7207,13 @@ figure {
   padding: .4rem .6rem;
   display: flex;
   position: relative;
+  transition: color .25s ease, opacity .25s ease, transform .25s ease, text-shadow .25s ease;
 }
 
 .dropdown-navbar:hover {
-  font-weight: 700;
+  text-shadow: 0 0 .65px currentColor, 0 0 .65px currentColor;
+  opacity: .85;
+  transform: translateY(-1px);
 }
 
 .dropdown-navbar.white {
