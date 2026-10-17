@@ -7209,6 +7209,10 @@ figure {
   position: relative;
 }
 
+.dropdown-navbar:hover {
+  font-weight: 700;
+}
+
 .dropdown-navbar.white {
   color: var(--color--soft-pearl);
 }
@@ -7906,7 +7910,7 @@ figure {
 .button-contact {
   grid-column-gap: 1.5rem;
   grid-row-gap: 1.5rem;
-  background-color: var(--color--soft-pearl);
+  background-color: var(--color--energy-green);
   color: var(--color--deep-charcoal);
   border-radius: .5rem;
   justify-content: flex-start;

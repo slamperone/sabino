@@ -16514,12 +16514,12 @@
                         },
                         mediaQueries: ["main", "medium", "small", "tiny"],
                         target: {
-                            id: "69002c5230201afdd240ae0b|4ff4ad4d-8fe1-3a89-2e3d-e41d4c634096",
+                            id: "4ff4ad4d-8fe1-3a89-2e3d-e41d4c634096",
                             appliesTo: "ELEMENT",
                             styleBlockIds: []
                         },
                         targets: [{
-                            id: "69002c5230201afdd240ae0b|4ff4ad4d-8fe1-3a89-2e3d-e41d4c634096",
+                            id: "4ff4ad4d-8fe1-3a89-2e3d-e41d4c634096",
                             appliesTo: "ELEMENT",
                             styleBlockIds: []
                         }],
@@ -16550,12 +16550,12 @@
                         },
                         mediaQueries: ["main", "medium", "small", "tiny"],
                         target: {
-                            id: "69002c5230201afdd240ae0b|71e42ed6-186c-a5c1-aaa5-ab33d29f2acb",
+                            id: "71e42ed6-186c-a5c1-aaa5-ab33d29f2acb",
                             appliesTo: "ELEMENT",
                             styleBlockIds: []
                         },
                         targets: [{
-                            id: "69002c5230201afdd240ae0b|71e42ed6-186c-a5c1-aaa5-ab33d29f2acb",
+                            id: "71e42ed6-186c-a5c1-aaa5-ab33d29f2acb",
                             appliesTo: "ELEMENT",
                             styleBlockIds: []
                         }],
@@ -18067,86 +18067,6 @@
                             effectIn: null
                         },
                         createdOn: 0x1919671ec6b
-                    },
-                    "e-2338": {
-                        id: "e-2338",
-                        name: "",
-                        animationType: "custom",
-                        eventTypeId: "MOUSE_OVER",
-                        action: {
-                            id: "",
-                            actionTypeId: "GENERAL_START_ACTION",
-                            config: {
-                                delay: 0,
-                                easing: "",
-                                duration: 0,
-                                actionListId: "a-449",
-                                affectedElements: {},
-                                playInReverse: !1,
-                                autoStopEventId: "e-2339"
-                            }
-                        },
-                        mediaQueries: ["main", "medium", "small", "tiny"],
-                        target: {
-                            selector: ".services-card",
-                            originalId: "40608484-2bd8-cf0e-f12e-16650eab2666",
-                            appliesTo: "CLASS"
-                        },
-                        targets: [{
-                            selector: ".services-card",
-                            originalId: "40608484-2bd8-cf0e-f12e-16650eab2666",
-                            appliesTo: "CLASS"
-                        }],
-                        config: {
-                            loop: !1,
-                            playInReverse: !1,
-                            scrollOffsetValue: null,
-                            scrollOffsetUnit: null,
-                            delay: null,
-                            direction: null,
-                            effectIn: null
-                        },
-                        createdOn: 0x191968ea9ae
-                    },
-                    "e-2339": {
-                        id: "e-2339",
-                        name: "",
-                        animationType: "custom",
-                        eventTypeId: "MOUSE_OUT",
-                        action: {
-                            id: "",
-                            actionTypeId: "GENERAL_START_ACTION",
-                            config: {
-                                delay: 0,
-                                easing: "",
-                                duration: 0,
-                                actionListId: "a-450",
-                                affectedElements: {},
-                                playInReverse: !1,
-                                autoStopEventId: "e-2338"
-                            }
-                        },
-                        mediaQueries: ["main", "medium", "small", "tiny"],
-                        target: {
-                            selector: ".services-card",
-                            originalId: "40608484-2bd8-cf0e-f12e-16650eab2666",
-                            appliesTo: "CLASS"
-                        },
-                        targets: [{
-                            selector: ".services-card",
-                            originalId: "40608484-2bd8-cf0e-f12e-16650eab2666",
-                            appliesTo: "CLASS"
-                        }],
-                        config: {
-                            loop: !1,
-                            playInReverse: !1,
-                            scrollOffsetValue: null,
-                            scrollOffsetUnit: null,
-                            delay: null,
-                            direction: null,
-                            effectIn: null
-                        },
-                        createdOn: 0x191968ea9b0
                     },
                     "e-2341": {
                         id: "e-2341",
