@@ -4,15 +4,9 @@ import DisplayTitle from "./DisplayTitle.astro";
 
 interface Props {
   text?: string;
-  buttonText?: string;
-  buttonHref?: string;
 }
 
-const {
-  text = "Let's build something remarkable.",
-  buttonText = "Get in touch",
-  buttonHref = "mailto:hey@puenter.agency",
-} = Astro.props;
+const { text = "Let's build something remarkable." } = Astro.props;
 ---
 
 <section>
@@ -23,32 +17,142 @@ const {
           text={text}
           dataWId="4b8f4f01-6181-b7d6-f567-f70c9e9c2771"
         />
-        <div
-          data-w-id="4b8f4f01-6181-b7d6-f567-f70c9e9c2774"
-          class="last-cta-button-wrap"
-        >
-          <a
-            href={buttonHref}
-            data-w-id="4b8f4f01-6181-b7d6-f567-f70c9e9c2775"
-            class="button grey w-inline-block"
-          >
-            <div class="button-wrapper">
-              <div class="button-icon white">
-                <img
-                  loading="lazy"
-                  src="/img/69002c5230201afdd240afef_Arrow Footer.svg"
-                  alt="Arrow"
-                  class="icon invert"
-                />
+
+        <div class="last-cta-form-container">
+          <div class="contact-1-wrapper">
+            <div
+              data-w-id="4ff4ad4d-8fe1-3a89-2e3d-e41d4c634096"
+              style="opacity: 0"
+              class="contact-wrapper"
+            >
+              <div class="contact-heading">
+                <div class="contact-size">Contact us</div>
               </div>
-              <div class="button-text-color margin-right">
-                <div class="text-size-medium text-weight-medium">
-                  {buttonText}
+              <div class="contact-grid">
+                <div
+                  id="w-node-_4ff4ad4d-8fe1-3a89-2e3d-e41d4c63409e-d240ae0b"
+                  class="contact-content"
+                >
+                  <div class="opacity-60">
+                    <div class="text-size-small-vw caps text-weight-medium">
+                      email address
+                    </div>
+                  </div>
+                  <div class="opacity-80">
+                    <div class="text-size-xlarge-vw">hey@puenter.agency</div>
+                  </div>
+                </div>
+                <div class="contact-content">
+                  <div class="opacity-60">
+                    <div class="text-size-small-vw caps text-weight-medium">
+                      phone
+                    </div>
+                  </div>
+                  <div class="opacity-80">
+                    <div class="text-size-xlarge-vw">+52 1 55 3007 1888</div>
+                  </div>
+                </div>
+                <!--div
+              id="w-node-_4ff4ad4d-8fe1-3a89-2e3d-e41d4c6340a8-d240ae0b"
+              class="contact-content"
+            >
+              <div class="opacity-60">
+                <div class="text-size-small-vw caps text-weight-medium">
+                  address
                 </div>
               </div>
-              <div class="button-icon absolute white"></div>
+              <div class="address-wrapper">
+                <div class="text-size-xlarge-vw">Suite 9</div>
+                <div class="text-size-xlarge-vw">12 Wellington Place</div>
+                <div class="text-size-xlarge-vw">Melbourne, VIC 3000</div>
+                <div class="text-size-xlarge-vw">Australia</div>
+              </div>
+            </div-->
+              </div>
             </div>
-          </a>
+            <div class="form-wrapper w-form">
+              <form
+                method="POST"
+                action="/send-mail.php"
+                name="email-form"
+                data-name="Email Form"
+                style="opacity: 0"
+                data-w-id="71e42ed6-186c-a5c1-aaa5-ab33d29f2acb"
+                id="email-form"
+                class="form"
+              >
+                <!-- Campo trampa Anti-Spam (oculto para humanos) -->
+                <input
+                  type="text"
+                  name="_hp_website"
+                  style="display:none !important; position:absolute; left:-9999px;"
+                  tabindex="-1"
+                  autocomplete="off"
+                />
+                <div class="form-content">
+                  <div class="name-wrapper-contact">
+                    <label for="name" class="text-size-medium-vw">Name</label
+                    ><input
+                      class="text-field-contact w-input"
+                      maxlength="256"
+                      name="name-2"
+                      data-name="Name 2"
+                      placeholder="Enter your name"
+                      type="text"
+                      id="name-2"
+                      required=""
+                    />
+                  </div>
+                  <div class="name-wrapper-contact">
+                    <label for="Enter-your-e-mail" class="text-size-medium-vw"
+                      >E-mail</label
+                    ><input
+                      class="text-field-contact w-input"
+                      maxlength="256"
+                      name="Enter-your-e-mail"
+                      data-name="Enter Your E Mail"
+                      placeholder="Enter your e-mail"
+                      type="email"
+                      id="Enter-your-e-mail"
+                      required=""
+                    />
+                  </div>
+                  <label for="field" class="text-size-medium-vw">Message</label
+                  ><textarea
+                    id="field-2"
+                    name="field-2"
+                    maxlength="5000"
+                    data-name="Field 2"
+                    placeholder="Your message..."
+                    class="text-field-contact w-input"></textarea>
+                </div>
+                <div class="contact-button">
+                  <div href="#" class="main-button">
+                    <input
+                      type="submit"
+                      data-wait="Please wait..."
+                      class="submit-button w-button"
+                      value="Submit"
+                    />
+                    <div class="relative">
+                      <div class="text-weight-medium">Submit Message</div>
+                    </div>
+                    <div class="button-mask-pricing"></div>
+                  </div>
+                </div>
+              </form>
+              <div class="success-message w-form-done">
+                <div class="text-size-contact">
+                  Thank you! Your submission has been received!
+                </div>
+              </div>
+              <div class="error-message w-form-fail">
+                <div class="text-size-medium-contact">
+                  Oops! Something went wrong while submitting the form.
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -89,3 +193,106 @@ const {
     <div class="sticky-gradient"></div>
   </div>
 </section>
+
+<script is:inline>
+  function setupLastCtaForm() {
+    const forms = document.querySelectorAll(".last-cta-form-container form");
+    forms.forEach((form) => {
+      if (form.dataset.formBound) return;
+      form.dataset.formBound = "true";
+
+      const wrapper = form.closest(".form-wrapper");
+      const successMessage = wrapper
+        ? wrapper.querySelector(".success-message")
+        : null;
+      const errorMessage = wrapper
+        ? wrapper.querySelector(".error-message")
+        : null;
+      const errorText = errorMessage
+        ? errorMessage.querySelector(".text-size-medium-contact")
+        : null;
+      const submitInput = form.querySelector('input[type="submit"]');
+      const submitLabel = form.querySelector(
+        ".contact-button .text-weight-medium"
+      );
+
+      form.addEventListener("submit", async (e) => {
+        e.preventDefault();
+
+        const defaultLabel = submitLabel
+          ? submitLabel.textContent
+          : "Submit Message";
+        const waitText = submitInput
+          ? submitInput.getAttribute("data-wait") || "Please wait..."
+          : "Please wait...";
+
+        if (submitLabel) submitLabel.textContent = waitText;
+        if (submitInput) submitInput.disabled = true;
+        if (errorMessage) errorMessage.style.display = "none";
+
+        try {
+          const formData = new FormData(form);
+          const response = await fetch(form.action || "/send-mail.php", {
+            method: "POST",
+            body: formData,
+            headers: {
+              Accept: "application/json",
+            },
+          });
+
+          const result = await response.json().catch(() => null);
+
+          if (response.ok && result && result.success) {
+            form.style.display = "none";
+            if (successMessage) successMessage.style.display = "block";
+            form.reset();
+          } else {
+            const msg =
+              (result && result.message) ||
+              "Oops! Something went wrong while submitting the form.";
+            if (errorText) errorText.textContent = msg;
+            if (errorMessage) errorMessage.style.display = "block";
+            if (submitLabel) submitLabel.textContent = defaultLabel;
+            if (submitInput) submitInput.disabled = false;
+          }
+        } catch (err) {
+          if (errorMessage) errorMessage.style.display = "block";
+          if (submitLabel) submitLabel.textContent = defaultLabel;
+          if (submitInput) submitInput.disabled = false;
+        }
+      });
+    });
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", setupLastCtaForm);
+  } else {
+    setupLastCtaForm();
+  }
+  document.addEventListener("astro:page-load", setupLastCtaForm);
+</script>
+
+<style>
+  .last-cta {
+    height: auto;
+    min-height: 100vh;
+    padding-top: 10vh;
+    padding-bottom: 8vh;
+    position: relative;
+    overflow: hidden;
+  }
+  .last-cta-conponent {
+    width: 100%;
+    z-index: 2;
+    position: relative;
+  }
+  .last-cta-form-container {
+    width: 100%;
+  }
+  .last-cta .contact-1-wrapper {
+    margin-top: 2.5rem;
+    margin-bottom: 2rem;
+    padding-left: 0;
+    padding-right: 0;
+  }
+</style>
