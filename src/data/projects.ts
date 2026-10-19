@@ -19,6 +19,16 @@ export const projects: Project[] = [
     href: "/works/platinum-circle-2024",
     imgSrc: "/img/home-work-2.jpg",
   },
+      {
+    title: "Year in Review FY22 & FY23",
+    href: "/works/year-in-review",
+    imgSrc: "/img/home-work-13.jpg",
+  },
+  {
+    title: "Launch Engagement Reports FY21 & FY23",
+    href: "/works/launch-engagement-reports",
+    imgSrc: "/img/home-work-14.jpg",
+  },
   {
     title: "Service Recognition Event 2024",
     href: "/works/service-recognition-event-2024",
@@ -49,4 +59,5 @@ export const projects: Project[] = [
     href: "/works/winners-circle-2024",
     imgSrc: "/img/home-work-8.jpg",
   },
+
 ];

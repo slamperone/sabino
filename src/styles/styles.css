@@ -6668,7 +6668,7 @@ figure {
 
 .button-mask-pricing {
   border: 1px solid var(--color--energy-green);
-  background-color: #ff7e5d;
+  background-color: var(--color--energy-green);
   width: 100%;
   height: 100%;
   display: none;
@@ -6762,7 +6762,7 @@ figure {
   color: #212121;
   cursor: pointer;
   background-color: #fbfbfb;
-  border-radius: 0;
+  border-radius: .4rem;
   justify-content: flex-start;
   align-items: center;
   padding: .8rem 1.5rem;
@@ -6809,7 +6809,7 @@ figure {
 
 .cart-button {
   color: #fbfbfb;
-  background-color: #ff7e5d;
+  background-color: var(--deep-charcoal);
   border-radius: 50%;
   justify-content: center;
   width: 4rem;
@@ -6823,7 +6823,7 @@ figure {
 .cart-button:hover {
   opacity: .8;
   color: #101011;
-  background-color: #ed5145;
+  background-color: var(--energy-green);
   transform: scale(.9);
 }
 
@@ -6833,7 +6833,7 @@ figure {
 
 .checkout-button {
   color: #fbfbfb;
-  background-color: #ff7e5d;
+  background-color: var(--energy-green);
   border-radius: 6px;
 }
 
@@ -6882,7 +6882,7 @@ figure {
 }
 
 .contact-grid {
-  grid-column-gap: .833vw;
+  grid-column-gap: 1.5vw;
   grid-row-gap: 2.5vw;
   grid-template-rows: auto auto;
   grid-template-columns: 1fr 1fr;
@@ -6898,9 +6898,9 @@ figure {
 }
 
 .contact-size {
-  font-family: var(--font--general-serif);
-  font-size: 4.167vw;
-  font-weight: 400;
+  font-family: var(--font--bomboniere);
+  font-size: 5.167vw;
+  font-weight: 700;
   line-height: 1;
 }
 

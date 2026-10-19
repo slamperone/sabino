@@ -1,0 +1,201 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import BottomNavbar from "../../components/BottomNavbar.astro";
+import SelectedProjectsGrid from "../../components/SelectedProjectsGrid.astro";
+import LastCta from "../../components/LastCta.astro";
+import DisplayTitle from "../../components/DisplayTitle.astro";
+
+const { title = "Year in Review FY22 & FY23" } = Astro.props;
+---
+
+<BaseLayout
+  title="Year in Review FY22 & FY23"
+  description="Two editions of an annual recap infographic for an in-house creative services team."
+  ogImage="/img/home-work-13.jpg"
+  wfPage="69002c5230201afdd240ad49"
+  navTheme="white"
+>
+  <BottomNavbar />
+
+  <!-- Project Heading -->
+  <section>
+    <div class="padding-global">
+      <div class="w-layout-blockcontainer container w-container">
+        <div class="margin-top-15vh">
+          <div class="hero-content-wrapper">
+            <div class="hero-heading-content max-width-100">
+              {
+                title && (
+                  <div class="clients-header margin-bottom-4vh margin-top-1vh">
+                    <DisplayTitle text={title} />
+                  </div>
+                )
+              }
+              <div class="rich-text align-center w-richtext">
+                <h4>
+                  <span class="text-weight-bold">End Client:</span> Confidential |
+                  <span class="text-weight-bold">Services:</span> Data Visualization, 
+                  Infographic Design, Illustration
+                </h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Project Hero Image -->
+  <section>
+    <div
+      data-w-id="0b4fc445-652d-5de3-a1c2-e45bf38fcd4f"
+      style="opacity:0"
+      class="blog-image-wrapper"
+    >
+      <img
+        style="-webkit-transform:translate3d(0, 0, 0) scale3d(1.2, 1.2, 1);transform:translate3d(0, 0, 0) scale3d(1.2, 1.2, 1)"
+        alt="Creative Services Year in Review FY22 & FY23"
+        src="/img/works/year-in-review/work_13-1.jpg"
+        loading="lazy"
+        class="image"
+      />
+      <div style="height:100%" class="mask-frame"></div>
+    </div>
+  </section>
+
+  <!-- Project Case Study Content -->
+  <section>
+    <div class="w-layout-blockcontainer container w-container">
+      <div class="works-template">
+        <div class="work-content">
+          <div class="rich-text align-center w-richtext">
+            <h3>
+              An annual report for an in-house creative services team, 
+              summarizing each year of output for internal stakeholders: 
+              assets delivered against goal, design hours invested, most 
+              requested deliverables, and the teams and projects behind them. 
+              Two editions were designed one year apart, each built to be read 
+              quickly and shared widely.
+            </h3>
+            <h3>
+              The FY22 edition established the structure: 
+              a single line guiding the reader from top to bottom, 
+              large colored figures with quieter labels, and spot illustrations 
+              tied to each metric, from a target for campaigns to a handshake 
+              for the top requesting team. Rankings stayed simple, with numbered 
+              lists and three bars comparing the most requested deliverables.
+            </h3>
+          </div>
+        </div>
+
+        <div class="work-template-images vertical">
+          <img
+            alt="FY22 annual report infographic"
+            loading="lazy"
+            src="/img/works/year-in-review/work_13-2.jpg"
+            class="image"
+          />
+          <div class="mask-frame"></div>
+        </div>
+        <div class="work-template-images vertical right">
+          <img
+            alt="FY23 annual report infographic"
+            loading="lazy"
+            src="/img/works/year-in-review/work_13-3.jpg"
+            class="image"
+          />
+          <div class="mask-frame"></div>
+          </div>
+
+
+        <div class="work-content">
+          <div class="rich-text align-center w-richtext">
+            <h3>
+              The FY23 edition kept the same foundation, since both years 
+              sit within the same brand system, and put the effort into variety. 
+              Spot icons grew into full illustrated scenes that bridge each section, 
+              each deliverable type took its own shape (circles, squares, and triangles), 
+              and a ring chart was added to show each team’s share of the year’s output. 
+              The goal was a report that feels familiar to returning readers without 
+              reading as a repeat.
+            </h3>
+          </div>
+        </div>
+
+       <div class="work-template-images margin-bottom">
+          <img
+            alt="Illustration and chart details, FY22"
+            loading="lazy"
+            src="/img/works/year-in-review/work_13-4.jpg"
+            class="image"
+          />
+          <div class="mask-frame"></div>
+        </div>
+
+        <div class="work-template-images margin-bottom">
+          <img
+            alt="Illustration and chart details, FY23"
+            loading="lazy"
+            src="/img/works/year-in-review/work_13-5.jpg"
+            class="image"
+          />
+          <div class="mask-frame"></div>
+        </div>
+
+        <div class="work-content">
+          <div class="rich-text align-center w-richtext">
+            <h4>
+              All illustrations are original work, except for 
+              the human figures, taken from the client’s illustration 
+              library. Client details, names, and figures have been modified 
+              for confidentiality.
+            </h4>
+          </div>
+        </div>
+
+        
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Intermediate CTA Section -->
+  <section>
+    <div class="white-wrapper">
+      <div class="padding-global">
+        <div class="w-layout-blockcontainer container medium w-container">
+          <div class="cta-component">
+            <div class="cta-wrapper">
+              <div class="marquee-tag">
+                <div class="marquee-tag-wrapper">
+                  <div class="text-size-small caps">selected projects</div>
+                  <div class="elipse"></div>
+                </div>
+                <div class="marquee-tag-wrapper">
+                  <div class="text-size-small caps">selected projects</div>
+                  <div class="elipse"></div>
+                </div>
+                <div class="marquee-tag-wrapper">
+                  <div class="text-size-small caps">selected projects</div>
+                  <div class="elipse"></div>
+                </div>
+              </div>
+              <div class="cta">
+                <div class="text-size-xdisplay line-height-122 about-style">
+                  Strategic thinking. Thoughtful execution. Designed to connect,
+                  engage, and move brands forward.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Selected Projects Grid -->
+  <SelectedProjectsGrid />
+
+  <!-- Last CTA -->
+  <LastCta />
+</BaseLayout>
