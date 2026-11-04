@@ -2,11 +2,13 @@
 // src/pages/about.astro
 import BaseLayout from "../layouts/BaseLayout.astro";
 import BottomNavbar from "../components/BottomNavbar.astro";
+import DisplayTitle from "../components/DisplayTitle.astro";
 ---
 
 <BaseLayout
   title="About — Puenter Agency"
   description="Puenter is the design and illustration studio of Daniel Puente Ramírez."
+  wfPage="69002c5230201afdd240ad49"
   navTheme="white"
 >
   <!-- Menú flotante (el mismo del home) -->
@@ -19,10 +21,12 @@ import BottomNavbar from "../components/BottomNavbar.astro";
 
           <!-- Izquierda: título + texto -->
           <div class="about-text">
-            <h1 class="about-title">
+            <div class="about-title">
+              <DisplayTitle as="h1">
               Independent <br />
               by design.
-            </h1>
+            </DisplayTitle>
+            </div>
             <div class="about-body">
               <p>PUENTER is an independent design studio founded and led by Daniel&nbsp;Puente, 
               a graphic designer and art director with over 10 years of&nbsp;experience.</p>
@@ -40,9 +44,22 @@ import BottomNavbar from "../components/BottomNavbar.astro";
             </div>
           </div>
 
-          <!-- Derecha: foto -->
+          <!-- Derecha: foto (mismo efecto de entrada que las páginas de works) -->
           <div class="about-photo">
-            <img src="/img/about.png" alt="Daniel Puente Ramírez" />
+            <div
+              data-w-id="0b4fc445-652d-5de3-a1c2-e45bf38fcd4f"
+              style="opacity:0"
+              class="blog-image-wrapper"
+            >
+              <img
+                style="-webkit-transform:translate3d(0, 0, 0) scale3d(1.2, 1.2, 1);transform:translate3d(0, 0, 0) scale3d(1.2, 1.2, 1)"
+                alt="Daniel Puente Ramírez"
+                src="/img/about.png"
+                loading="lazy"
+                class="image"
+              />
+              <div style="height:100%" class="mask-frame"></div>
+            </div>
           </div>
 
         </div>
@@ -66,14 +83,23 @@ import BottomNavbar from "../components/BottomNavbar.astro";
     margin-top: 0;
     margin-bottom: 2.5rem;
   }
+  .about-title :global(.display-title-wrap) {
+    justify-content: flex-start;
+  }
+  .about-title :global(.display-title-text) {
+    text-align: left;
+  }
   .about-body p {
     max-width: 34rem;
     margin-bottom: 1.25rem;
   }
   .about-photo {
     aspect-ratio: 4 / 5;
-    background: #e5e5e5; /* gris mientras no haya foto */
     overflow: hidden;
+  }
+  .about-photo .blog-image-wrapper {
+    height: 100%;
+    margin: 0;
   }
   .about-photo img {
     width: 100%;
