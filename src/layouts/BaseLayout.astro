@@ -171,6 +171,38 @@ const {
         transform: translateY(0) scale(1) rotate(0deg);
       }
     }
+
+    /* Botón "Get started": texto negro en hover (todas las páginas y temas) */
+    .navbar-button .button-navbar-text-color,
+    .navbar-button .button-navbar-text-color * {
+      transition: color 0.3s ease;
+    }
+    .navbar-button:hover .button-navbar-text-color,
+    .navbar-button:hover .button-navbar-text-color * {
+      color: #121212 !important;
+    }
+
+    /* Navbar superior: texto en bold en hover, sin que se muevan los links */
+    @media (min-width: 992px) {
+      .navbar .dropdown-navbar .text-size-regular,
+      .navbar .link-block-navbar > div {
+        display: inline-grid;
+      }
+      .navbar .dropdown-navbar .text-size-regular::after,
+      .navbar .link-block-navbar > div::after {
+        content: attr(data-text);
+        font-weight: 400;
+        visibility: hidden;
+        height: 0;
+        overflow: hidden;
+        pointer-events: none;
+        user-select: none;
+      }
+      .navbar .dropdown-navbar:hover .text-size-regular,
+      .navbar .link-block-navbar:hover > div {
+        font-weight: 400;
+      }
+    }
   </style>
 
   <script is:inline src="https://use.typekit.net/aps1zie.js" type="text/javascript"></script>

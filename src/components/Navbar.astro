@@ -65,7 +65,7 @@ const isWhite = theme === "white";
                     class={`dropdown-navbar ${isWhite ? "white" : "white-mobile"} w-dropdown-toggle`}
                     style="text-decoration:none;"
                   >
-                    <div class="text-size-regular">Home</div>
+                    <div class="text-size-regular" data-text="Home">Home</div>
                   </a>
                 </div>
 
@@ -79,7 +79,7 @@ const isWhite = theme === "white";
                     class={`dropdown-navbar ${isWhite ? "white" : "white-mobile"} w-dropdown-toggle`}
                     style="text-decoration:none;"
                   >
-                    <div class="text-size-regular">Services</div>
+                    <div class="text-size-regular" data-text="Services">Services</div>
                   </a>
                 </div>
 
@@ -93,7 +93,21 @@ const isWhite = theme === "white";
                     class={`dropdown-navbar ${isWhite ? "white" : "white-mobile"} w-dropdown-toggle`}
                     style="text-decoration:none;"
                   >
-                    <div class="text-size-regular">Works</div>
+                    <div class="text-size-regular" data-text="Works">Works</div>
+                  </a>
+                </div>
+
+                <div
+                  data-delay="250"
+                  data-hover="false"
+                  class="nav-link w-dropdown"
+                >
+                  <a
+                    href="/about"
+                    class={`dropdown-navbar ${isWhite ? "white" : "white-mobile"} w-dropdown-toggle`}
+                    style="text-decoration:none;"
+                  >
+                    <div class="text-size-regular" data-text="About">About</div>
                   </a>
                 </div>
 
@@ -113,10 +127,10 @@ const isWhite = theme === "white";
 
                 <div class="mobile-navbar-content">
                   <a href="/works" class="link-block-navbar w-inline-block">
-                    <div>Projects</div>
+                    <div data-text="Projects">Projects</div>
                   </a>
                   <a href="/#contact" class="link-block-navbar w-inline-block">
-                    <div>Contact</div>
+                    <div data-text="Contact">Contact</div>
                   </a>
                   <a
                     href="mailto:hey@puenter.agency"
@@ -184,13 +198,13 @@ const isWhite = theme === "white";
                 href="/works"
                 class={`link-block-navbar ${isWhite ? "" : "black"} w-inline-block`}
               >
-                <div>Projects</div>
+                <div data-text="Projects">Projects</div>
               </a>
               <a
                 href="/#contact"
                 class={`link-block-navbar ${isWhite ? "" : "black"} w-inline-block`}
               >
-                <div>Contact</div>
+                <div data-text="Contact">Contact</div>
               </a>
               <a
                 href="mailto:hey@puenter.agency"

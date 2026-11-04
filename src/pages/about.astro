@@ -1,0 +1,96 @@
+---
+// src/pages/about.astro
+import BaseLayout from "../layouts/BaseLayout.astro";
+import BottomNavbar from "../components/BottomNavbar.astro";
+---
+
+<BaseLayout
+  title="About — Puenter Agency"
+  description="Puenter is the design and illustration studio of Daniel Puente Ramírez."
+  navTheme="white"
+>
+  <!-- Menú flotante (el mismo del home) -->
+  <BottomNavbar />
+
+  <section class="about">
+    <div class="padding-global">
+      <div class="w-layout-blockcontainer container w-container">
+        <div class="about-grid">
+
+          <!-- Izquierda: título + texto -->
+          <div class="about-text">
+            <h1 class="about-title">
+              Independent <br />
+              by design.
+            </h1>
+            <div class="about-body">
+              <p>PUENTER is an independent design studio founded and led by Daniel&nbsp;Puente, 
+              a graphic designer and art director with over 10 years of&nbsp;experience.</p>
+              <p>We work with brands and creative teams to turn ideas into clear, 
+              considered design across branding, digital experiences, and motion graphics. 
+              From defining a visual identity to developing creative for a larger campaign, 
+              we bring the same focus to every project: understand the problem, find the right idea, 
+              and make the design do its job.</p>
+              <p>Daniel’s experience spans technology, education, and hospitality, 
+              with years of collaboration with clients and creative teams in Mexico and abroad. 
+              His approach combines art direction, strategic thinking, and hands-on design, 
+              with an eye for both the bigger picture and the details that bring it all together.</p>
+              <p>The aim is simple: make things clear, make them work, and make them worth looking at.</p>
+              <p>Have a project in mind? Let’s talk.</p>
+            </div>
+          </div>
+
+          <!-- Derecha: foto -->
+          <div class="about-photo">
+            <img src="/img/about.png" alt="Daniel Puente Ramírez" />
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .about {
+    padding-top: 10rem;
+    padding-bottom: 10rem; /* espacio para que el menú flotante no tape el texto */
+  }
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+  }
+  .about-title {
+    margin-top: 0;
+    margin-bottom: 2.5rem;
+  }
+  .about-body p {
+    max-width: 34rem;
+    margin-bottom: 1.25rem;
+  }
+  .about-photo {
+    aspect-ratio: 4 / 5;
+    background: #e5e5e5; /* gris mientras no haya foto */
+    overflow: hidden;
+  }
+  .about-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  /* Celular: una columna, la foto queda debajo del texto */
+  @media (max-width: 767px) {
+    .about {
+      padding-top: 7rem;
+      padding-bottom: 8rem;
+    }
+    .about-grid {
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+    }
+  }
+</style>
