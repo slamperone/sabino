@@ -7,45 +7,39 @@ import DisplayTitle from "../components/DisplayTitle.astro";
 
 <BaseLayout
   title="About — Puenter Agency"
-  description="Puenter is the design and illustration studio of Daniel Puente Ramírez."
+  description="PUENTER is an independent design studio founded and led by Daniel Puente, a graphic designer and art director."
   wfPage="69002c5230201afdd240ad49"
   navTheme="white"
 >
   <!-- Menú flotante (el mismo del home) -->
   <BottomNavbar />
 
-  <section class="about">
+  <section class="ap-section">
     <div class="padding-global">
       <div class="w-layout-blockcontainer container w-container">
-        <div class="about-grid">
+        <div class="ap-grid">
 
-          <!-- Izquierda: título + texto -->
-          <div class="about-text">
-            <div class="about-title">
+          <!-- Título: animado por Webflow vía .hero-content-wrapper (igual que en works) -->
+          <div class="ap-title">
+            <div class="hero-content-wrapper">
               <DisplayTitle as="h1">
-              Independent <br />
-              by design.
-            </DisplayTitle>
-            </div>
-            <div class="about-body">
-              <p>PUENTER is an independent design studio founded and led by Daniel&nbsp;Puente, 
-              a graphic designer and art director with over 10 years of&nbsp;experience.</p>
-              <p>We work with brands and creative teams to turn ideas into clear, 
-              considered design across branding, digital experiences, and motion graphics. 
-              From defining a visual identity to developing creative for a larger campaign, 
-              we bring the same focus to every project: understand the problem, find the right idea, 
-              and make the design do its job.</p>
-              <p>Daniel’s experience spans technology, education, and hospitality, 
-              with years of collaboration with clients and creative teams in Mexico and abroad. 
-              His approach combines art direction, strategic thinking, and hands-on design, 
-              with an eye for both the bigger picture and the details that bring it all together.</p>
-              <p>The aim is simple: make things clear, make them work, and make them worth looking at.</p>
-              <p>Have a project in mind? Let’s talk.</p>
+                Independent<br />
+                by design.
+              </DisplayTitle>
             </div>
           </div>
 
-          <!-- Derecha: foto (mismo efecto de entrada que las páginas de works) -->
-          <div class="about-photo">
+          <!-- Texto -->
+          <div class="ap-body">
+            <p>PUENTER is an independent design studio founded and led by Daniel Puente, a graphic designer and art director with over 10 years of experience.</p>
+            <p>We work with brands and creative teams to turn ideas into clear, considered design across branding, digital experiences, and motion graphics. From defining a visual identity to developing creative for a larger campaign, we bring the same focus to every project: understand the problem, find the right idea, and make the design do its job.</p>
+            <p>Daniel’s experience spans technology, education, and hospitality, with years of collaboration with clients and creative teams in Mexico and abroad. His approach combines art direction, strategic thinking, and hands-on design, with an eye for both the bigger picture and the details that bring it all together.</p>
+            <p>The aim is simple: make things clear, make them work, and make them worth looking at.</p>
+            <p class="ap-cta">Have a project in mind? <a href="mailto:hey@puenter.agency">Let’s talk.</a></p>
+          </div>
+
+          <!-- Foto: animada por Webflow vía data-w-id (igual que en works) -->
+          <div class="ap-photo">
             <div
               data-w-id="0b4fc445-652d-5de3-a1c2-e45bf38fcd4f"
               style="opacity:0"
@@ -54,7 +48,7 @@ import DisplayTitle from "../components/DisplayTitle.astro";
               <img
                 style="-webkit-transform:translate3d(0, 0, 0) scale3d(1.2, 1.2, 1);transform:translate3d(0, 0, 0) scale3d(1.2, 1.2, 1)"
                 alt="Daniel Puente Ramírez"
-                src="/img/about.png"
+                src="/img/about.jpg"
                 loading="lazy"
                 class="image"
               />
@@ -69,54 +63,105 @@ import DisplayTitle from "../components/DisplayTitle.astro";
 </BaseLayout>
 
 <style>
-  .about {
+  .ap-section {
     padding-top: 10rem;
-    padding-bottom: 10rem; /* espacio para que el menú flotante no tape el texto */
+    padding-bottom: 10rem; /* espacio para que el menú flotante no tape el final */
   }
-  .about-grid {
+
+  /* Escritorio: título arriba a la izquierda, foto abajo a la izquierda, texto a la derecha */
+  .ap-grid {
     display: grid;
-    grid-template-columns: 1.1fr 1fr;
-    gap: 4rem;
-    align-items: start;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 1fr;
+    grid-template-areas:
+      "title body"
+      "photo body";
+    column-gap: 6rem;
+    row-gap: 3rem;
   }
-  .about-title {
-    margin-top: 0;
-    margin-bottom: 2.5rem;
-  }
-  .about-title :global(.display-title-wrap) {
-    justify-content: flex-start;
-  }
-  .about-title :global(.display-title-text) {
-    text-align: left;
-  }
-  .about-body p {
-    max-width: 34rem;
-    margin-bottom: 1.25rem;
-  }
-  .about-photo {
-    aspect-ratio: 4 / 5;
+  .ap-title { grid-area: title; }
+  .ap-body  { grid-area: body; }
+  .ap-photo {
+    grid-area: photo;
+    position: relative;
+    min-height: 20rem;
     overflow: hidden;
   }
-  .about-photo .blog-image-wrapper {
-    height: 100%;
+
+  /* Título alineado a la izquierda (el componente y el wrapper vienen centrados) */
+  .ap-title .hero-content-wrapper {
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  .ap-title :global(.display-title-wrap) {
+    justify-content: flex-start;
+  }
+  .ap-title :global(.display-title-text) {
+    text-align: left;
+  }
+
+  /* Párrafos */
+  .ap-body p {
+    margin-top: 0;
+    margin-bottom: 1.25rem;
+  }
+  .ap-body p:last-child {
+    margin-bottom: 0;
+  }
+
+    /* Última línea en bold, "Let's talk" verde en hover */
+  .ap-cta {
+    font-weight: 400;
+  }
+  .ap-cta a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  .ap-cta a:hover {
+    color: var(--color--energy-green);
+  }
+
+  /* La foto llena el espacio libre debajo del título */
+  .ap-photo .blog-image-wrapper {
+    position: absolute;
+    inset: 0;
+    width: auto;
+    height: auto;
     margin: 0;
   }
-  .about-photo img {
+  .ap-photo img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     display: block;
   }
 
-  /* Celular: una columna, la foto queda debajo del texto */
+  /* Tablet: menos separación entre columnas */
+  @media (max-width: 991px) {
+    .ap-grid {
+      column-gap: 3rem;
+    }
+  }
+
+  /* Celular: una columna → título, texto, foto */
   @media (max-width: 767px) {
-    .about {
+    .ap-section {
       padding-top: 7rem;
       padding-bottom: 8rem;
     }
-    .about-grid {
+    .ap-grid {
       grid-template-columns: 1fr;
-      gap: 2.5rem;
+      grid-template-rows: auto;
+      grid-template-areas:
+        "title"
+        "body"
+        "photo";
+      row-gap: 2.5rem;
+    }
+    .ap-photo {
+      min-height: 0;
+      aspect-ratio: 4 / 5;
     }
   }
 </style>
