@@ -18,6 +18,8 @@ const {
   wfPage = "69003b725c09305a7640a56a",
   navTheme = "dark"
 } = Astro.props;
+
+const ogImageUrl = new URL(ogImage, "https://puenter.agency").href;
 ---
 
 <!DOCTYPE html>
@@ -28,10 +30,10 @@ const {
   <meta content={description} name="description" />
   <meta content={title} property="og:title" />
   <meta content={description} property="og:description" />
-  <meta content={ogImage} property="og:image" />
+  <meta content={ogImageUrl} property="og:image" />
   <meta content={title} name="twitter:title" />
   <meta content={description} name="twitter:description" />
-  <meta content={ogImage} name="twitter:image" />
+  <meta content={ogImageUrl} name="twitter:image" />
   <meta property="og:type" content="website" />
   <meta content="summary_large_image" name="twitter:card" />
   <meta content="width=device-width, initial-scale=1" name="viewport" />
